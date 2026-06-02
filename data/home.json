@@ -1,0 +1,12 @@
+{
+  "nextMeeting": {
+    "date": "2026-08-18T15:30:00",
+    "topic": "Crypto Kickoff",
+    "presenter": "President"
+  },
+
+  "officersPreview": [
+    { "name": "Dawson", "position": "President" },
+    { "name": "Vice President", "position": "Vice President" }
+  ]
+}

@@ -1,0 +1,184 @@
+/* =========================
+   GLOBAL
+========================= */
+
+:root {
+  --primary: #2E008C;
+  --secondary: #5FE1D9;
+  --gray: #747474;
+  --bg: #0b0b12;
+  --surface: #14141c;
+  --text: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 30px;
+  background: rgba(20, 20, 28, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  color: var(--secondary);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav-links a {
+  color: var(--text);
+  margin-left: 18px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: var(--secondary);
+}
+
+.nav-cta {
+  padding: 6px 10px;
+  border: 1px solid var(--secondary);
+  border-radius: 6px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+
+  background: radial-gradient(circle at center, #1a0a3a, var(--bg));
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  color: var(--secondary);
+}
+
+.subtitle {
+  color: var(--gray);
+  margin-top: 8px;
+}
+
+.tagline {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  margin: 5px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.primary {
+  background: var(--primary);
+  color: white;
+}
+
+.secondary {
+  background: var(--secondary);
+  color: black;
+}
+
+/* glow effect */
+.hero-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: var(--primary);
+  filter: blur(120px);
+  opacity: 0.25;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  color: var(--secondary);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+  background: var(--surface);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #222;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid #222;
+  color: var(--gray);
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.link {
+  color: var(--secondary);
+  text-decoration: none;
+}
