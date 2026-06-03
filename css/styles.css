@@ -186,7 +186,7 @@ a.nav-active {
     .officerSpot.featured .officerPosition {
         grid-row: 2;
     }
-
+    
     .officerSpot.featured .officerBio {
         grid-row: 3;
     }
