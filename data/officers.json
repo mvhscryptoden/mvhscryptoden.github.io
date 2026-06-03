@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Dawson K. Spies",
+    "position": "President",
+    "bio": "I joined Crypto Den in August of 2023. Currently a senior. I have no idea what im gonna do for a career.",
+    "image": "media/leadership/president.jpg"
+  },
+  {
+    "name": "Connor Lane",
+    "position": "Vice President",
+    "bio": "I am a senior, and I joined Crypto Den at the end of my freshman year (2024). My favorite hobby is fishing!",
+    "image": "media/leadership/vicepresident.jpg"
+  },
+  {
+    "name": "Pierce Robinson",
+    "position": "Secretary",
+    "bio": "Senior, joined freshman year, love fixing appliances.",
+    "image": "media/leadership/secretary.jpg"
+  },
+  {
+    "name": "Rylan Mathias",
+    "position": "Treasurer",
+    "bio": "Hardworking senior who joined Crypto Den in the beginning of my junior year. I like to go rock climbing and research topics relating to nuclear energy. I hope to pursue it as a career.",
+    "image": "media/leadership/treasurer.jpg"
+  },
+  {
+    "name": "TBD",
+    "position": "Media Department",
+    "bio": "media and whatnot.",
+    "image": "media/leadership/media.jpg"
+  }
+]

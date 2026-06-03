@@ -17,7 +17,7 @@
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="officers.html">Officers</a>
+            <a class="nav-active" href="officers.html">Officers</a>
             <a href="schedule.html">Schedule</a>
             <a href="competition.html">Competition</a>
             <a href="news.html">News</a>
@@ -25,37 +25,39 @@
         </nav>
     </header>
 
-    <!-- PAGE HEADER -->
-    <section class="section">
-        <h1>Leadership</h1>
-        <p class="subtitle">Crypto Den Officer Team</p>
-    </section>
+    <!-- OFFICERS LAYOUT -->
+    <section class="officerLayout">
 
-    <!-- OFFICERS GRID (EMPTY PLACEHOLDER FOR JSON LOADING) -->
-    <section class="section">
-        <div id="officersGrid" class="grid">
-            <div class="officerRow">
-                <div class="officerSpot">
-                    <img src="president.jpg" alt="President Photo" />
-                    <h2 class="officerName">Dawson Spies</h2>
-                    <h3 class="officerPosition">President</h3>
-                    <p class="officerBio">Bio lorem ipsum whatnot</p>
-                </div>
-                <div class="officerSpot"></div>
+        <!-- ROW 1 -->
+        <div class="row1">
+
+            <div class="headerBox">
+                <h1>Leadership</h1>
+                <p>Crypto Den Officer Team</p>
             </div>
-            <div class="officerRow">
-                <div class="officerSpot"></div>
-                <div class="officerSpot"></div>
-                <div class="officerSpot"></div>
-            </div>
+
+            <div id="row1Cards"></div>
+
         </div>
+
+        <!-- ROW 2 -->
+        <div id="row2Cards"></div>
+
     </section>
 
-    <!-- FOOTER -->
+    <!--<section class="officerInfo section">
+        <h1>Officer Info</h1>
+        <div class="officerInfoQuestion">
+            <h2>How do I become an officer?</h2>
+            <p></p>
+        </div>
+    </section>-->
+
     <footer>
         <p>© 2026 Crypto Den | Mission Vista High School</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/officers.js"></script>
+
 </body>
-</html>
+    </html>
