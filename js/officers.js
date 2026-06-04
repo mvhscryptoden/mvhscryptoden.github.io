@@ -28,7 +28,7 @@ fetch("data/officers.json")
                 card.className = "officerCard";
                 card.innerHTML = `
                     <img src="${officer.image}" alt="${officer.name}">
-                    <h2>${officer.name}</h2>
+                    <h2 class="leaderName">${officer.name}</h2>
                     <h3 class="leaderPosition">${officer.position}</h3>
                     <p class="leaderBio">${officer.bio}</p>
                 `;

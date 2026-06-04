@@ -2,12 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
 :root {
-    --primary: #02ee8c;
-    --secondary: #4eb6df;
+    --primary: #4eb6df;
+    --secondary: #02ee8c;
     --gray: #747474;
     --bg: #1c1c1c;
     --text: #ffffff;
-    --accent: #0E3755;
+    --accent: #0a395b;
+    --card-color: #212121;
 }
 
 /* RESET */
@@ -71,10 +72,10 @@ small {
 }
 
 .logo {
-    color: var(--secondary);
+    color: var(--primary);
     font-weight: bold;
     letter-spacing: 2px;
-    border-bottom: 2px solid var(--secondary);
+    border-bottom: 2px solid var(--primary);
     padding-bottom: 6px;
 }
 
@@ -87,19 +88,23 @@ small {
 }
 
 .nav-links a:hover {
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 a.nav-active {
-    color: var(--secondary);
-    border-bottom: 2px solid var(--secondary);
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
     padding-bottom: 6px;
 }
 
 .nav-cta {
     padding: 6px 10px;
-    border: 1px solid var(--secondary);
+    border: 2px solid var(--accent);
     border-radius: 6px;
+}
+
+.nav-cta:hover {
+    border: 2px solid var(--primary);
 }
 
 /* LAYOUT HELPERS */
@@ -122,8 +127,8 @@ footer {
 
 /* COMMON CARD (used elsewhere too) */
 .card {
-    background: var(--accent);
-    border: 1px solid #222;
+    background: var(--card-color);
+    border: 1px solid #101010;
     border-radius: 14px;
     padding: 20px;
     transition: 0.2s ease;
@@ -131,5 +136,5 @@ footer {
 
 .card:hover {
     transform: translateY(-5px);
-    border-color: var(--secondary);
+    border-color: var(--accent);
 }

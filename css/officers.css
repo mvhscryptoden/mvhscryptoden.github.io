@@ -12,7 +12,7 @@
 
 .pageTitle {
     text-align: center;
-    color: var(--secondary);
+    color: var(--primary);
     margin-bottom: 10px;
 }
 
@@ -39,8 +39,8 @@
 ========================= */
 
 .leaderCard {
-    background: var(--accent);
-    border: 1px solid #222;
+    background: var(--card-color);
+    border: 1px solid #2d2d2d;
     border-radius: 16px;
     padding: 20px;
     display: flex;
@@ -66,12 +66,13 @@
 
 /* Leader text */
 .leaderName {
-    color: var(--text);
+    color: var(--secondary);
 }
 
 .leaderPosition {
-    color: var(--secondary);
+    color: var(--text);
     margin-top: 5px;
+    line-height: 1.4;
 }
 
 .leaderBio {
@@ -86,7 +87,7 @@
 
 .officerGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     align-items: start;
     gap: 15px;
     padding: 20px 40px;
@@ -97,8 +98,8 @@
 ========================= */
 
 .officerCard {
-    background: var(--accent);
-    border: 1px solid #222;
+    background: var(--card-color);
+    border: 1px solid #2d2d2d;
     border-radius: 14px;
     padding: 16px;
     display: flex;
@@ -131,18 +132,6 @@
 .leaderCard h2,
 .leaderCard h3 {
     margin: 0;
-}
-
-.officerCard h3,
-.leaderCard h3 {
-    color: var(--secondary);
-    font-weight: normal;
-}
-
-.officerCard p,
-.leaderCard p {
-    color: var(--gray);
-    line-height: 1.4;
 }
 
 .leaderCard,
