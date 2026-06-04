@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
 :root {
-    --primary: #0E3755;
-    --secondary: #5FE1D9;
+    --primary: #02ee8c;
+    --secondary: #4eb6df;
     --gray: #747474;
     --bg: #1c1c1c;
-    --surface: #14141c;
     --text: #ffffff;
+    --accent: #0E3755;
 }
 
 /* RESET */
@@ -122,7 +122,7 @@ footer {
 
 /* COMMON CARD (used elsewhere too) */
 .card {
-    background: var(--surface);
+    background: var(--accent);
     border: 1px solid #222;
     border-radius: 14px;
     padding: 20px;

@@ -39,7 +39,7 @@
 ========================= */
 
 .leaderCard {
-    background: var(--surface);
+    background: var(--accent);
     border: 1px solid #222;
     border-radius: 16px;
     padding: 20px;
@@ -97,7 +97,7 @@
 ========================= */
 
 .officerCard {
-    background: var(--surface);
+    background: var(--accent);
     border: 1px solid #222;
     border-radius: 14px;
     padding: 16px;
