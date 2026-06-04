@@ -1,0 +1,167 @@
+/* =========================
+   OVERRIDES
+========================= */
+.section {
+    width: 60vw;
+    margin: auto;
+}
+
+/* =========================
+   PAGE TITLES
+========================= */
+
+.pageTitle {
+    text-align: center;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.subTitle {
+    text-align: center;
+    color: var(--gray);
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   LEADERSHIP SPOTLIGHT (TOP 2)
+========================= */
+
+.leadershipSpotlight {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 40px;
+}
+
+/* =========================
+   LEADER CARD (PRES + VP)
+========================= */
+
+.leaderCard {
+    background: var(--surface);
+    border: 1px solid #222;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    transition: 0.2s ease;
+}
+
+.leaderCard:hover {
+    transform: translateY(-6px);
+    border-color: var(--gray);
+}
+
+/* Leader image */
+.leaderCard img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid var(--secondary);
+    flex-shrink: 0;
+}
+
+/* Leader text */
+.leaderName {
+    color: var(--text);
+}
+
+.leaderPosition {
+    color: var(--secondary);
+    margin-top: 5px;
+}
+
+.leaderBio {
+    color: var(--gray);
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+/* =========================
+   OFFICER GRID (REST OF TEAM)
+========================= */
+
+.officerGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: start;
+    gap: 15px;
+    padding: 20px 40px;
+}
+
+/* =========================
+   OFFICER CARD (STANDARD)
+========================= */
+
+.officerCard {
+    background: var(--surface);
+    border: 1px solid #222;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    transition: 0.2s ease;
+}
+
+.officerCard:hover {
+    transform: translateY(-5px);
+    border-color: var(--gray);
+}
+
+/* Officer image */
+.officerCard img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid var(--secondary);
+    flex-shrink: 0;
+}
+
+    /* =========================
+   TEXT CONSISTENCY
+========================= */
+
+.officerCard h2,
+.officerCard h3,
+.leaderCard h2,
+.leaderCard h3 {
+    margin: 0;
+}
+
+.officerCard h3,
+.leaderCard h3 {
+    color: var(--secondary);
+    font-weight: normal;
+}
+
+.officerCard p,
+.leaderCard p {
+    color: var(--gray);
+    line-height: 1.4;
+}
+
+.leaderCard,
+.officerCard {
+    animation: fadeIn 0.35s ease both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   OFFICER FAQ
+========================= */

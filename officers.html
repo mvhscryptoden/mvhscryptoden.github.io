@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leadership | Crypto Den</title>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/officers.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
     <header class="navbar">
         <div class="logo">CRYPTO DEN</div>
 
@@ -25,40 +25,46 @@
         </nav>
     </header>
 
-    <!-- OFFICERS LAYOUT -->
-    <section class="officerLayout">
+    <section class="section">
 
-        <!-- ROW 1 -->
-        <div class="row1">
+        <h1 class="pageTitle">Leadership</h1>
 
-            <div class="headerBox">
-                <h1>Leadership</h1>
-                <p>Crypto Den Officer Team</p>
-            </div>
+        <!-- TOP LEADERS -->
+        <div class="leadershipSpotlight" id="leadershipSpotlight"></div>
 
-            <div id="row1Cards"></div>
-
-        </div>
-
-        <!-- ROW 2 -->
-        <div id="row2Cards"></div>
+        <!-- REST OF OFFICERS -->
+        <div class="officerGrid" id="officerGrid"></div>
 
     </section>
 
-    <!--<section class="officerInfo section">
-        <h1>Officer Info</h1>
-        <div class="officerInfoQuestion">
-            <h2>How do I become an officer?</h2>
-            <p></p>
+    <section class="section officerFaq">
+        <h1 class="pageTitle">
+            Officer Faq
+        </h1>
+        <div class="faqItem">
+            <h2 class="faqQuestion">Q: How do I become an officer?</h2>
+            <p class="faqAnswer">
+                A: Officers are elected once per year for the following school year.
+                Students interested in becoming officers may declare their candidacy approximately one month before elections.
+                During this period, multiple candidates may run for the same position.
+                Club members then vote, and the student with the most votes is selected for each role.
+            </p>
+            <button class="faqButton"><a href="">Become an officer!</a></button>
         </div>
-    </section>-->
+        <div class="faqItem">
+            <h2 class="faqQuestion">Q: What does being an officer entail?</h2>
+            <p class="faqAnswer">
+                A: Officers run meetings, manage competitions, and promote the club to non-members.
+                Officers fill out and submit all club paperwork, and 
+            </p>
+        </div>
+    </section>
 
     <footer>
         <p>© 2026 Crypto Den | Mission Vista High School</p>
     </footer>
 
-
     <script src="js/officers.js"></script>
 
 </body>
-    </html>
+</html>

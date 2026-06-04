@@ -2,31 +2,37 @@ fetch("data/officers.json")
     .then(res => res.json())
     .then(officers => {
 
-        const row1 = document.getElementById("row1Cards");
-        const row2 = document.getElementById("row2Cards");
+        const spotlight = document.getElementById("leadershipSpotlight");
+        const grid = document.getElementById("officerGrid");
 
         officers.forEach(officer => {
 
+            const isLeader =
+                officer.position === "President" ||
+                officer.position === "Vice President";
+
             const card = document.createElement("div");
-            card.classList.add("officerSpot");
 
-            // featured roles
-            if (officer.position === "President" || officer.position === "Vice President") {
-                card.classList.add("featured");
-            }
-
-            card.innerHTML = `
-                <img class="officerPhoto" src="${officer.image}" alt="${officer.name}">
-                
-                <h2 class="officerName">${officer.name}</h2>
-                <h3 class="officerPosition">${officer.position}</h3>
-                <p class="officerBio">${officer.bio}</p>
-            `;
-
-            if (officer.position === "President" || officer.position === "Vice President") {
-                row1.appendChild(card);
+            if (isLeader) {
+                card.className = "leaderCard";
+                card.innerHTML = `
+                    <img src="${officer.image}" alt="${officer.name}">
+                    <div>
+                        <h2 class="leaderName">${officer.name}</h2>
+                        <h3 class="leaderPosition">${officer.position}</h3>
+                        <p class="leaderBio">${officer.bio}</p>
+                    </div>
+                `;
+                spotlight.appendChild(card);
             } else {
-                row2.appendChild(card);
+                card.className = "officerCard";
+                card.innerHTML = `
+                    <img src="${officer.image}" alt="${officer.name}">
+                    <h2>${officer.name}</h2>
+                    <h3 class="leaderPosition">${officer.position}</h3>
+                    <p class="leaderBio">${officer.bio}</p>
+                `;
+                grid.appendChild(card);
             }
         });
     });

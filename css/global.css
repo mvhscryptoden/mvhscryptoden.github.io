@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+    --primary: #0E3755;
+    --secondary: #5FE1D9;
+    --gray: #747474;
+    --bg: #1c1c1c;
+    --surface: #14141c;
+    --text: #ffffff;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+}
+
+/* 16px */
+
+h1 {
+    font-size: 2.489rem; /* 39.84px */
+}
+
+h2 {
+    font-size: 2.074rem; /* 33.12px */
+}
+
+h3 {
+    font-size: 1.728rem; /* 27.68px */
+}
+
+h4 {
+    font-size: 1.440rem; /* 23.04px */
+}
+
+h5 {
+    font-size: 1.200rem; /* 19.2px */
+}
+
+small {
+    font-size: 0.833rem; /* 13.28px */
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(20, 20, 28, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    color: var(--secondary);
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 6px;
+}
+
+/* NAV LINKS */
+.nav-links a {
+    color: var(--text);
+    margin-left: 18px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: var(--secondary);
+}
+
+a.nav-active {
+    color: var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 6px;
+}
+
+.nav-cta {
+    padding: 6px 10px;
+    border: 1px solid var(--secondary);
+    border-radius: 6px;
+}
+
+/* LAYOUT HELPERS */
+.section {
+    padding: 60px 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+/* FOOTER */
+footer {
+    color: var(--gray);
+    padding: 25px;
+    text-align: center;
+}
+
+/* COMMON CARD (used elsewhere too) */
+.card {
+    background: var(--surface);
+    border: 1px solid #222;
+    border-radius: 14px;
+    padding: 20px;
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+}
