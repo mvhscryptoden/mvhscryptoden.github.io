@@ -60,23 +60,23 @@
     height: 120px;
     object-fit: cover;
     border-radius: 12px;
-    border: 2px solid var(--secondary);
+    border: 2px solid var(--primary);
     flex-shrink: 0;
 }
 
 /* Leader text */
 .leaderName {
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 .leaderPosition {
-    color: var(--text);
+    color: var(--secondary);
     margin-top: 5px;
     line-height: 1.4;
 }
 
 .leaderBio {
-    color: var(--gray);
+    color: var(--text-color);
     margin-top: 10px;
     line-height: 1.4;
 }
@@ -119,7 +119,7 @@
     height: 220px;
     object-fit: cover;
     border-radius: 12px;
-    border: 2px solid var(--secondary);
+    border: 2px solid var(--primary);
     flex-shrink: 0;
 }
 
@@ -154,3 +154,39 @@
 /* =========================
    OFFICER FAQ
 ========================= */
+.faqItem {
+    margin-bottom: 20px;
+}
+
+.faqQuestion {
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+}
+
+.faqAnswer {
+    margin-top: 10px;
+    padding: 0px 20px;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.faqSpecial {
+    color: var(--secondary);
+}
+
+.faqButton {
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 20px;
+    background: var(--button-bg-blue);
+    border: 2px solid var(--primary);
+}
+
+.faqButton > a {
+    color: var(--text-color);
+    text-decoration: none;
+}

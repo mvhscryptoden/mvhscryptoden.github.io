@@ -9,6 +9,10 @@
     --text: #ffffff;
     --accent: #0a395b;
     --card-color: #212121;
+    --button-bg-blue: #4eb6df0d;
+    --button-bg-green: #02ee8c0d;
+    --nav-bg: #161616e0;
+    --nav-border: #222;
 }
 
 /* RESET */
@@ -66,9 +70,9 @@ small {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: rgba(20, 20, 28, 0.85);
+    background: var(--nav-bg);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid var(--nav-border);
 }
 
 .logo {
@@ -125,7 +129,7 @@ footer {
     text-align: center;
 }
 
-/* COMMON CARD (used elsewhere too) */
+/* COMMON CARD*/
 .card {
     background: var(--card-color);
     border: 1px solid #101010;
@@ -137,4 +141,22 @@ footer {
 .card:hover {
     transform: translateY(-5px);
     border-color: var(--accent);
+}
+
+/* BUTTONS */
+.btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn.primary {
+    background: var(--secondary);
+    color: black;
+}
+
+.btn.secondary {
+    border: 1px solid var(--secondary);
+    color: var(--text);
 }

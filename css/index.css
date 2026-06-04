@@ -31,23 +31,6 @@
     justify-content: center;
 }
 
-.btn {
-    padding: 10px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.btn.primary {
-    background: var(--secondary);
-    color: black;
-}
-
-.btn.secondary {
-    border: 1px solid var(--secondary);
-    color: var(--text);
-}
-
 /* HERO GLOW (optional aesthetic layer) */
 .hero-glow {
     position: absolute;
