@@ -2,7 +2,7 @@ fetch("data/calendar.json")
     .then(res => res.json())
     .then(events => {
 
-        const list = document.getElementById("nextMeetingCard");
+        const list = document.getElementById("eventsContainer");
 
         let count = 0;
         let eventsToShow = 4; //change count based on input on website
@@ -14,23 +14,30 @@ fetch("data/calendar.json")
 
             card.className = "eventItem";
             card.innerHTML = `
-                <div class="eventItem">
-                    <h3 class="eventTitle">Club Meeting</h3>
-
-                    <div class="eventMeta">
-                        <p><strong>Host:</strong> ${event.host}</p>
-                        <p><strong>Date:</strong> ${event.date}</p>
-                        <p><strong>Time:</strong> ${event.time}</p>
+            <div class="eventDate">
+                <h1 class="eventDay">${event.day}</h1>
+                <p class="eventMonthYear">${event.monthYear}</p>
+            </div>
+            <div class="eventInfo">
+                <h3 class="eventTitle">${event.title}</h3>
+                <p class="eventDetails"><strong>Details:</strong> ${event.details}</p>
+                <p class="eventLocation"><strong>Location:</strong> ${event.location}</p>
+                <p class="eventHost"><strong>Host:</strong> ${event.host}</p>
+                <div class="eventInfoSpecial">
+                    <div class="eventTime">
+                        <p>
+                            <i class="fa-regular fa-clock eventInfoIcon"></i>
+                            ${event.time}
+                        </p>
                     </div>
-
-                    <p class="eventLocation">
-                        <strong>Location:</strong> ${event.location}
-                    </p>
-
-                    <p class="eventDetails">
-                        ${event.details}
-                    </p>
+                    <div class="eventLocation">
+                        <p>
+                            <i class="fa-solid fa-location-dot eventInfoIcon"></i>
+                            ${event.location}
+                        </p>
+                    </div>
                 </div>
+            </div>
             `;
 
             list.appendChild(card);

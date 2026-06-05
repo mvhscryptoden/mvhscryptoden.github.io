@@ -163,6 +163,8 @@ small {
 /* LAYOUT HELPERS */
 .section {
     padding: 60px 40px;
+    max-width: 60vw;
+    margin: 0 auto;
 }
 
 .section-header {
@@ -202,6 +204,11 @@ footer p:first-child {
 .card:hover {
     transform: translateY(-5px);
     border-color: var(--accent);
+}
+
+.cardNoHover:hover {
+    transform: none;
+    border-color: #101010;
 }
 
 /* BUTTONS */

@@ -56,3 +56,81 @@
     opacity: 0.25;
     z-index: -1;
 }
+
+/* EVENTS */
+.eventItem {
+    background: var(--card-bg);
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: stretch;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.eventItem:hover {
+    border-color: var(--accent);
+}
+
+.eventTitle {
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.eventInfo {
+    padding: 20px;
+}
+
+.eventInfo strong {
+    color: var(--secondary);
+}
+
+.eventDate {
+    width: 150px;
+    background: var(--secondary);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eventDate * {
+    color: var(--text);
+}
+
+.eventDay {
+    font-size: 4rem;
+}
+
+#eventsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#sectionCount {
+    margin-bottom: 20px;
+}
+
+.eventInfoSpecial {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.eventInfoSpecial p {
+    background: var(--primary);
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.eventInfoIcon {
+    scale: 1.2;
+    margin-right: 5px;
+}
