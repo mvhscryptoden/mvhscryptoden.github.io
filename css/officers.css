@@ -76,7 +76,7 @@
 }
 
 .leaderBio {
-    color: var(--text-color);
+    color: var(--text);
     margin-top: 10px;
     line-height: 1.4;
 }
@@ -156,6 +156,12 @@
 ========================= */
 .faqItem {
     margin-bottom: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right, transparent, var(--accent), transparent) 1;
+    border-bottom: none;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .faqQuestion {
@@ -163,6 +169,7 @@
     cursor: pointer;
     position: relative;
     padding: 5px 0;
+    cursor: default;
 }
 
 .faqAnswer {
@@ -179,14 +186,32 @@
 .faqButton {
     padding: 10px 16px;
     border-radius: 8px;
+    border: 2px solid var(--secondary);
     text-decoration: none;
     font-size: 14px;
     margin-top: 20px;
     background: var(--button-bg-blue);
-    border: 2px solid var(--primary);
 }
 
 .faqButton > a {
-    color: var(--text-color);
+    color: var(--text);
     text-decoration: none;
+}
+
+.officerFaq .pageTitle {
+    margin-bottom: 50px;
+}
+
+.faqButtons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn.primary:hover {
+    border: 1px solid var(--gray);
+}
+
+.btn.secondary:hover {
+    border: 1px solid var(--gray);
 }

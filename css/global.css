@@ -7,12 +7,11 @@
     --gray: #747474;
     --bg: #1c1c1c;
     --text: #ffffff;
-    --accent: #0a395b;
+    --accent: #95cbe0;
     --card-color: #212121;
-    --button-bg-blue: #4eb6df0d;
-    --button-bg-green: #02ee8c0d;
+    --button-bg-hover: #02ee8c72;
     --nav-bg: #161616e0;
-    --nav-border: #222;
+    --nav-border: #222222;
 }
 
 /* RESET */
@@ -39,26 +38,32 @@ h1, h2, h3, h4, h5 {
 
 h1 {
     font-size: 2.489rem; /* 39.84px */
+    color: var(--primary);
 }
 
 h2 {
     font-size: 2.074rem; /* 33.12px */
+    color: var(--primary);
 }
 
 h3 {
     font-size: 1.728rem; /* 27.68px */
+    color: var(--secondary);
 }
 
 h4 {
     font-size: 1.440rem; /* 23.04px */
+    color: var(--secondary);
 }
 
 h5 {
     font-size: 1.200rem; /* 19.2px */
+    color: var(--secondary);
 }
 
 small {
     font-size: 0.833rem; /* 13.28px */
+    color: var(--secondary);
 }
 
 /* NAVBAR */
@@ -83,22 +88,60 @@ small {
     padding-bottom: 6px;
 }
 
+#bounceTxt em {
+    display: inline-block;
+    font-style: normal;
+}
+
+/* Animation class added by JS */
+#bounceTxt.play em {
+    animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+}
+
 /* NAV LINKS */
 .nav-links a {
     color: var(--text);
     margin-left: 18px;
     text-decoration: none;
     font-size: 14px;
+    position: relative;
+    display: inline-block;
 }
 
-.nav-links a:hover {
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* Hover anim */
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-links a.nav-active {
     color: var(--primary);
 }
 
-a.nav-active {
-    color: var(--primary);
-    border-bottom: 2px solid var(--primary);
-    padding-bottom: 6px;
+.nav-links a.nav-active::after {
+    width: 100%;
+    left: 0;
 }
 
 .nav-cta {
@@ -107,13 +150,23 @@ a.nav-active {
     border-radius: 6px;
 }
 
+.nav-cta::after {
+    display: none;
+}
+
 .nav-cta:hover {
-    border: 2px solid var(--primary);
+    background: var(--accent);
+    color: black;
+    border-color: var(--accent);
 }
 
 /* LAYOUT HELPERS */
 .section {
     padding: 60px 40px;
+}
+
+.section-header {
+    margin-bottom: 5px;
 }
 
 .grid {
@@ -126,7 +179,15 @@ a.nav-active {
 footer {
     color: var(--gray);
     padding: 25px;
-    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+footer p:first-child {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* COMMON CARD*/
@@ -154,9 +215,23 @@ footer {
 .btn.primary {
     background: var(--secondary);
     color: black;
+    border: 1px solid var(--secondary);
+
+    & a {
+        color: black;
+        text-decoration: none;
+    }
 }
 
 .btn.secondary {
     border: 1px solid var(--secondary);
     color: var(--text);
+}
+
+.btn.primary:hover {
+    background: var(--button-bg-hover);
+}
+
+.btn.secondary:hover {
+    background: var(--button-bg-hover);
 }
