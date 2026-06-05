@@ -198,7 +198,10 @@ footer p:first-child {
     border: 1px solid #101010;
     border-radius: 14px;
     padding: 20px;
+    overflow: hidden;
     transition: 0.2s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {

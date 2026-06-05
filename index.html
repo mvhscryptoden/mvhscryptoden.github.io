@@ -55,10 +55,7 @@
             <i class="fa-regular fa-calendar-days"></i>
             Upcoming Events
         </h2>
-        <div class="card cardNoHover" id="nextMeetingCard">
-            <label for="sectionCount" class="sectionCountLabel">Items to display: </label>
-            <input type="number" id="sectionCount" name="sectionCount" min="1" max="39" /> <!--max is the  amount of events for the school year-->
-            <button id="searchEvents">Search</button>
+        <div class="card cardNoHover">
             <div id="eventsContainer" class="grid">
                 <!-- index.js should fill in this from calendar.json -->
                 <!-- EVENT TEMPLATE -->
@@ -88,7 +85,9 @@
                     </div>
                 </div> -->
             </div>
-            </div>
+
+            <p class="eventButton">Looking for more events?</p>
+            <a href="events.html" class="btn secondary eventButton">View All Events</a>
         </div>
     </section>
 

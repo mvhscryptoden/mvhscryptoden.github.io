@@ -11,17 +11,25 @@ letters.forEach((letter, index) => {
     letter.style.animationDelay = `${index * 0.05}s`;
 });
 
+let canBounce = true;
+const totalDuration = 600 + (letters.length * 50);
+
 text.addEventListener("mouseenter", () => {
+    if (!canBounce) return;
+
+    canBounce = false;
+
     text.classList.remove("play");
 
-    // Force reflow so animation can restart
     void text.offsetWidth;
 
     text.classList.add("play");
 
-    const totalDuration = 600 + (letters.length * 50);
-
     setTimeout(() => {
         text.classList.remove("play");
     }, totalDuration);
+
+    setTimeout(() => {
+        canBounce = true;
+    }, totalDuration); //use the duration as the cooldown
 });

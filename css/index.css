@@ -58,15 +58,6 @@
 }
 
 /* EVENTS */
-#searchEvents {
-    background: var(--primary);
-    color: var(--text);
-    border: none;
-    padding: 2px 6px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
 .eventItem {
     background: var(--card-bg);
     border: 1px solid var(--gray);
@@ -118,10 +109,6 @@
     flex-direction: column;
 }
 
-#sectionCount {
-    margin-bottom: 20px;
-}
-
 .eventInfoSpecial {
     display: flex;
     flex-direction: row;
@@ -142,4 +129,10 @@
 .eventInfoIcon {
     scale: 1.2;
     margin-right: 5px;
+}
+
+.eventButton {
+    width: fit-content;
+    align-self: center;
+    margin-top: 20px;
 }
