@@ -136,3 +136,56 @@
     align-self: center;
     margin-top: 20px;
 }
+
+.leadershipSpotlight {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* =========================
+   LEADER CARD (PRES + VP)
+========================= */
+
+.leaderCard {
+    background: var(--card-color);
+    border: 1px solid #2d2d2d;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    transition: 0.2s ease;
+}
+
+.leaderCard:hover {
+    transform: translateY(-6px);
+    border-color: var(--gray);
+}
+
+/* Leader image */
+.leaderCard img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid var(--primary);
+    flex-shrink: 0;
+}
+
+/* Leader text */
+.leaderName {
+    color: var(--primary);
+}
+
+.leaderPosition {
+    color: var(--secondary);
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+.leaderBio {
+    color: var(--text);
+    margin-top: 10px;
+    line-height: 1.4;
+}

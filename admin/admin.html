@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Admin | CryptoDen MVHS</title>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="admin.css">
+
+    <script src="https://kit.fontawesome.com/aebd67e261.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div id="bounceTxt" class="logo">CRYPTO DEN</div>
+
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a class="nav-active" href="admin.html">Admin</a>
+            <a href="../about.html">About</a>
+            <a href="../officers.html">Officers</a>
+            <a href="../calendar.html">Calendar</a>
+            <a href="../competition.html">Competition</a>
+            <a href="../archives.html">Archives</a>
+            <a href="../news.html">News</a>
+            <a href="../support.html">Support</a>
+            <a href="../photos.html">Photos</a>
+            <a href="../join.html" class="nav-cta">Join</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>ADMIN PANEL</h1>
+            <p id="userEmail"></p>
+
+            <p class="tagline">
+                Officer tools for managing announcements, members, and club communications.
+            </p>
+
+            <button id="loginBtn">
+                Sign In With Google
+            </button>
+
+            <div id="accessDenied" style="display:none;">
+                <p>Access denied. Please sign in using an authorized officer account.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- DASHBOARD -->
+    <section class="section">
+
+        <div id="dashboard" style="display:none;">
+
+            <!-- CREATE ANNOUNCEMENT -->
+            <div class="card">
+
+                <h2>
+                    <i class="fa-solid fa-bullhorn"></i>
+                    Create Announcement
+                </h2>
+
+                <div class="inputGroup">
+                    <label for="announcementTitle">
+                        Announcement Title
+                    </label>
+
+                    <input
+                        id="announcementTitle"
+                        type="text"
+                        placeholder="Competition Registration Opens">
+                </div>
+
+                <div class="inputGroup">
+                    <label for="announcementMessage">
+                        Announcement Message
+                    </label>
+
+                    <textarea
+                        id="announcementMessage"
+                        placeholder="Registration is now available for all members..."></textarea>
+                </div>
+
+                <button id="publishBtn" class="publishBtn">
+                    Publish Announcement
+                </button>
+
+            </div>
+
+            <!-- CURRENT ANNOUNCEMENTS -->
+            <div class="card">
+
+                <h2>
+                    <i class="fa-regular fa-newspaper"></i>
+                    Current Announcements
+                </h2>
+
+                <div id="announcementList"></div>
+
+            </div>
+
+            <div class="adminGrid">
+
+                <div class="card" id="manageMembersCard">
+                    <h3>
+                        <i class="fa-solid fa-users"></i>
+                        Manage Members
+                    </h3>
+
+                    <p>
+                        Add, remove, and organize member email lists.
+                    </p>
+
+
+                <div id="membersList"></div>
+
+                <label class="emailToAddLabel" for="emailToAdd"><p><strong>Add an Email:</strong></p></label>
+                <input type="email" name="emailToAdd" id="emailToAdd">
+                    <button id="addEmailButton">
+                        Add Email
+                    </button>
+                </div>
+
+                <div class="card">
+
+                    <h3>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        Manage Events
+                    </h3>
+
+                    <div class="eventForm">
+
+                        <input id="eventTitle" placeholder="Event Title">
+
+                        <input id="eventHost" placeholder="Host">
+
+                        <input id="eventMonthYear" placeholder="Aug '26">
+
+                        <input id="eventDay" type="number" placeholder="18">
+
+                        <input id="eventTime" placeholder="11:37 AM - 12:13 PM">
+
+                        <input id="eventLocation" placeholder="Location">
+
+                        <textarea
+                            id="eventDetails"
+                            placeholder="Event Details"></textarea>
+
+                        <button id="saveEventBtn">
+                            Add Event
+                        </button>
+
+                    </div>
+
+                    <div id="eventsList"></div>
+
+                </div>
+
+            </div>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+            <button id="importEventsBtn">
+                Import Calendar JSON
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Crypto Den | Mission Vista High School</p>
+        <p>Built by Dawson Spies</p>
+    </footer>
+
+    <script src="../js/global.js"></script>
+    <script type="module" src="admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+</body>
+</html>

@@ -54,3 +54,33 @@ fetch("data/calendar.json")
     // this will pop up if the JSON format is broken or the file is missing
     console.error(err);
 });
+
+//show leadership
+fetch("data/officers.json")
+    .then(res => res.json())
+    .then(officers => {
+
+        const spotlight = document.getElementById("leadershipSpotlight");
+
+        officers.forEach(officer => {
+
+            const isLeader =
+                officer.position === "President" ||
+                officer.position === "Vice President";
+
+            const card = document.createElement("div");
+
+            if (isLeader) {
+                card.className = "leaderCard";
+                card.innerHTML = `
+                    <img src="${officer.image}" alt="${officer.name}">
+                    <div>
+                        <h2 class="leaderName">${officer.name}</h2>
+                        <h3 class="leaderPosition">${officer.position}</h3>
+                        <p class="leaderBio">${officer.bio}</p>
+                    </div>
+                `;
+                spotlight.appendChild(card);
+            }
+        });
+    });
