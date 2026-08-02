@@ -78,10 +78,7 @@ function displayLeadershipPreview(officers) {
 
     if (!container) return; // stops if this isn't the homepage
 
-    const leaders = officers.filter(officer =>
-        officer.position === "President" ||
-        officer.position === "Vice President"
-    );
+    const leaders = officers
 
     leaders.forEach(officer => {
 

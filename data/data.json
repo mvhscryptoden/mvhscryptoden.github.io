@@ -3,5 +3,13 @@
         "officers": "https://docs.google.com/spreadsheets/d/1LhjNI1dNun1qJwnqo9BpROAD-tWaZdhTvO-oQ9iX7VQ/gviz/tq?tqx=out:json&gid=0",
         "events": "https://docs.google.com/spreadsheets/d/1eYvmfAS5VZXFz1xJl9FxCmVOVfpm-VIMh7wG8O9P6qY/gviz/tq?tqx=out:json&gid=0",
         "announcements": "https://docs.google.com/spreadsheets/d/1tXeIbb3GnXoRVfBg7_okmREylMohN3jY-jh7IgKio6A/gviz/tq?tqx=out:json&gid=1470706732"
+    },
+
+    "links": {
+        "htmw": "",
+        "github": "",
+        "instagram": "",
+        "remind": "",
+        "email": ""
     }
 }

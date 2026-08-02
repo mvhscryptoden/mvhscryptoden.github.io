@@ -35,15 +35,22 @@ async function loadAnnouncements() {
 
         const rows = await getSheet("announcements");
 
-        announcements = rows.map(row => ({
-            date: row.c[0]?.v ?? "",
-            title: row.c[1]?.v ?? "",
-            content: row.c[2]?.v ?? "",
-            author: row.c[3]?.v ?? "",
-            priority: row.c[4]?.v ?? ""
-        }));
-
         console.log(rows);
+        console.log(rows[0].c);
+        console.log(JSON.stringify(rows, null, 2)); 
+
+        announcements = rows
+            .filter(row => {
+                const title = row.c[1]?.v ?? "";
+                return title !== "Title";
+            })
+            .map(row => ({
+                date: row.c[0]?.v ?? "",
+                title: row.c[1]?.v ?? "",
+                content: row.c[2]?.v ?? "",
+                author: row.c[3]?.v ?? "",
+                priority: row.c[4]?.v ?? ""
+            }));
 
         displayAnnouncements(3);
 
