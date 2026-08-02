@@ -8,6 +8,11 @@
 
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/leadership.css">
+    <link rel="stylesheet" href="css/announcements.css">
+
+    <link rel="icon" type="image/x-icon" href="media/logo.png">
 
     <script src="https://kit.fontawesome.com/aebd67e261.js" crossorigin="anonymous"></script>
     </head>
@@ -59,7 +64,7 @@
                 Upcoming Events
             </h2>
             <div class="card cardNoHover">
-                <div id="eventsContainer" class="grid">
+                <div id="upcomingEventsContainer" class="grid">
                     <!-- index.js should fill in this from calendar.json -->
                     <!-- EVENT TEMPLATE -->
                     <!-- <div class="eventItem">
@@ -97,7 +102,33 @@
         <!-- ANNOUNCEMENTS -->
         <section class="section">
             <h2 class="section-header">Announcements</h2>
-            <div id="newsContainer" class="grid"></div>
+            <div id="newsContainer" class="grid">
+
+            <!--<div class="card">
+                    <div class="announcementTitleHolder">
+                        <h3 class="announcementTitle">${news.title}</h3>
+                        <p class="announcementUrgency ${news.urgency.toLowerCase()}">
+                            ${news.urgency}
+                        </p>
+                    </div>
+
+                    <p class="announcementContent">
+                        ${news.content}
+                    </p>
+
+                    <div class="announcementFooter">
+                        <small>Posted by ${news.author}</small>
+                        <small>${formatAnnouncementDate(news.date)}</small>
+                    </div>
+                </div>
+
+                <div class="card caughtUpCard">
+                    <h2>All caught up!</h2>
+                    <p>Im sure there will be more soon...</p>
+                </div>-->
+
+            </div>
+
         </section>
 
         <!-- WHY JOIN -->
@@ -105,16 +136,21 @@
             <h2 class="section-header">Why Join Crypto Den?</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Learn investing fundamentals</h3>
-                    <p>Lorem ipsum whatnot</p>
+                    <h3 class="cardHeader">Learn investing fundamentals</h3>
+                    <p class="cardText">Understand the basics of stocks, cryptocurrencies, markets, 
+                        and investment strategies through hands-on learning.</p>
                 </div>
+
                 <div class="card">
-                    <h3>Compete in real stock/crypto simulations</h3>
-                    <p>Lorem ipsum whatnot</p>
+                    <h3 class="cardHeader">Compete in real stock / crypto simulations</h3>
+                    <p class="cardText">Put your knowledge to the test with simulated trading competitions
+                         using real market data and strategies.</p>
                 </div>
+
                 <div class="card">
-                    <h3>Develop financial literacy</h3>
-                    <p>Lorem ipsum whatnot</p>
+                    <h3 class="cardHeader">Develop financial literacy</h3>
+                    <p class="cardText">Build practical skills in budgeting, investing, risk management, 
+                        and making informed financial decisions.</p>
                 </div>
             </div>
         </section>
@@ -122,7 +158,7 @@
         <!-- OFFICER PREVIEW -->
         <section class="section">
             <h2 class="section-header">Leadership Preview</h2>
-            <div class="leadershipSpotlight" id="leadershipSpotlight"></div>
+            <div class="leadershipPreview" id="leadershipPreview"></div>
         </section>
 
         <!-- FOOTER -->
@@ -131,7 +167,10 @@
             <p>Built by Dawson Spies</p>
         </footer>
 
-        <script src="js/global.js"></script>
-        <script src="js/index.js"></script>
+        <script type="module" src="js/global.js"></script>
+        <script type="module" src="js/events.js"></script>
+        <script type="module" src="js/officers.js"></script>
+        <script type="module" src="js/announcements.js"></script>
+
     </body>
     </html>

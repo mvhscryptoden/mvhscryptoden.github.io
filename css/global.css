@@ -12,6 +12,8 @@
     --button-bg-hover: #02ee8c72;
     --nav-bg: #161616e0;
     --nav-border: #222222;
+    --red: #e74c3c;
+    --yellow: #f1c40f;
 }
 
 /* RESET */
@@ -66,6 +68,10 @@ small {
     color: var(--secondary);
 }
 
+p {
+    line-height: 1.4;
+}
+
 /* NAVBAR */
 .navbar {
     position: sticky;
@@ -86,6 +92,10 @@ small {
     letter-spacing: 2px;
     border-bottom: 2px solid var(--primary);
     padding-bottom: 6px;
+}
+
+a {
+    color: var(--secondary);
 }
 
 #bounceTxt em {
@@ -167,6 +177,21 @@ small {
     margin: 0 auto;
 }
 
+.heroSection {
+    text-align: center;
+    padding: 80px 40px;
+}
+
+.pageEndContent {
+    max-width: 60vw;
+    margin: auto;
+    text-align: center;
+}
+
+.subTitle {
+    margin-bottom: -7px;
+}
+
 .section-header {
     margin-bottom: 5px;
 }
@@ -202,6 +227,14 @@ footer p:first-child {
     transition: 0.2s ease;
     display: flex;
     flex-direction: column;
+}
+
+.cardHeader {
+    margin-bottom: 10px;
+}
+
+.cardText {
+    line-height: 1.4;
 }
 
 .card:hover {

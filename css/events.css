@@ -1,0 +1,116 @@
+/* EVENT TITLE */
+.eventTitleHolder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.eventTitle {
+    color: var(--primary);
+    margin: 0 0 5px 0;
+}
+
+.eventID {
+    margin: 0;
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+
+/* EVENTS */
+.eventItem {
+    background: var(--card-bg);
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: stretch;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.eventItem:hover {
+    border-color: var(--accent);
+}
+
+.eventInfo {
+    padding: 20px;
+    flex: 1;
+}
+
+.eventInfo strong {
+    color: var(--secondary);
+}
+
+
+/* EVENT DATE */
+.eventDate {
+    width: 150px;
+    background: var(--secondary);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eventDate * {
+    color: var(--text);
+}
+
+.eventDay {
+    font-size: 4rem;
+}
+
+
+/* EVENT LIST */
+#eventsContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+}
+
+#highlightedEventContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+}
+
+#upcomingEventsContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+}
+
+
+/* EVENT DETAILS */
+.eventInfoSpecial {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.eventInfoSpecial p {
+    background: var(--primary);
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.eventInfoIcon {
+    scale: 1.2;
+    margin-right: 5px;
+}
+
+
+/* EVENT BUTTON */
+.eventButton {
+    width: fit-content;
+    align-self: center;
+    margin-top: 20px;
+}
