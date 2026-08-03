@@ -52,7 +52,7 @@ async function loadOfficers() {
                 card.className = "officerCard";
 
                 card.innerHTML = `
-                    <img src="${officer.image}" alt="${officer.name}">
+                    <img loading="lazy" src="${officer.image}" alt="${officer.name}">
                     <h2 class="leaderName">${officer.name}</h2>
                     <h3 class="leaderPosition">${officer.position}</h3>
                     <p class="leaderBio">${officer.bio}</p>
@@ -86,7 +86,7 @@ function displayLeadershipPreview(officers) {
         card.className = "leadershipPreviewCard";
 
         card.innerHTML = `
-            <img src="${officer.image}" alt="${officer.name}">
+            <img loading="lazy" src="${officer.image}" alt="${officer.name}">
 
             <div>
                 <h3>${officer.name}</h3>

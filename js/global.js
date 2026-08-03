@@ -57,3 +57,56 @@ export async function getSheet(name) {
 }
 
 //END GET SHEET FUNC
+
+// START HTMW NAV FUNC
+
+function updateHTMWNav() {
+    const competitionLinks = document.querySelectorAll(".competitionNav");
+
+    if (competitionLinks.length === 0) return;
+
+    const htmwLink = config.links.htmw?.trim();
+
+    competitionLinks.forEach(link => {
+        if (htmwLink) {
+            link.href = htmwLink;
+            link.target = "_blank";
+        } else {
+            link.href = "nocompetition.html";
+            link.removeAttribute("target");
+        }
+    });
+}
+
+updateHTMWNav();
+
+// END HTMW NAV FUNC
+
+
+// START SOCIAL LINKS FUNC
+
+function updateSocialLinks() {
+    const links = {
+        instagramLink: config.links.instagram,
+        githubLink: config.links.github,
+        emailLink: config.links.email
+    };
+
+    Object.entries(links).forEach(([id, url]) => {
+        const element = document.getElementById(id);
+
+        if (!element || !url?.trim()) return;
+
+        if (id === "emailLink") {
+            element.href = `mailto:${url.trim()}`;
+            element.removeAttribute("target");
+        } else {
+            element.href = url.trim();
+            element.target = "_blank";
+        }
+    });
+}
+
+updateSocialLinks();
+
+// END SOCIAL LINKS FUNC
