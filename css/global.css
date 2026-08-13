@@ -222,6 +222,12 @@ section.hero {
     margin-bottom: 5px;
 }
 
+.special {
+    background-image: linear-gradient(to right, var(--accent), var(--secondary));
+    color: transparent;
+    background-clip: text;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -233,6 +239,13 @@ footer {
     background: var(--nav-bg);
     border-top: 1px solid #222;
     color: white;
+}
+
+footer.stickyFooter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Top section */
