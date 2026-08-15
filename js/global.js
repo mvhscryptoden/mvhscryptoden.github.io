@@ -42,7 +42,7 @@ text.addEventListener("mouseenter", () => {
 
 // Load config once
 const config = await fetch("data/data.json").then(r => r.json());
-
+ 
 export async function getSheet(name) {
     const url = config.googleSheets[name];
 

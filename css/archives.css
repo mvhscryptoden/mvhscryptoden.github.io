@@ -1,0 +1,118 @@
+.archiveSection {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 30px;
+}
+
+.archiveSubtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 20px auto 60px;
+    color: var(--textSecondary);
+    line-height: 1.6;
+}
+
+.archiveContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.archiveCard {
+    background: var(--surface);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+}
+
+.archiveHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 30px;
+
+    border: none;
+    background: none;
+
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.archiveHeader:hover {
+    background: rgba(255, 255, 255, .03);
+}
+
+.archiveHeader i {
+    transition: transform .35s;
+}
+
+.archiveCard.open .archiveHeader i {
+    transform: rotate(180deg);
+}
+
+/* ---------- Accordion ---------- */
+
+.archiveContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+
+    max-height: 0;
+    overflow: hidden;
+
+    padding: 0 30px;
+
+    transition:
+        max-height .45s ease,
+        padding .45s ease;
+}
+
+.archiveCard.open .archiveContent {
+    max-height: 900px;
+    padding: 18px 30px 30px;
+}
+
+/* ---------- Links ---------- */
+
+.archiveContent a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    text-decoration: none;
+    color: white;
+
+    background: rgba(255, 255, 255, .04);
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    transition:
+        background .25s,
+        box-shadow .25s,
+        transform .25s;
+}
+
+.archiveContent a:hover {
+    background: rgba(255, 255, 255, .08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+    transform: scale(1.02);
+}
+
+.archiveContent i {
+    width: 24px;
+    font-size: 1.3rem;
+    color: #f4b400;
+}
+
+.archiveContent span {
+    font-size: 1rem;
+    font-weight: 500;
+}
