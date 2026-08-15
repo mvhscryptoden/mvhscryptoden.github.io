@@ -29,6 +29,54 @@ if (text) {
     });
 }
 
+function setupMobileNavigation() {
+    const navbar = document.querySelector(".navbar");
+    const navLinks = navbar?.querySelector(".nav-links");
+
+    if (!navbar || !navLinks || navbar.querySelector(".nav-toggle")) return;
+
+    const toggle = document.createElement("button");
+    toggle.className = "nav-toggle";
+    toggle.type = "button";
+    toggle.setAttribute("aria-label", "Open navigation menu");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-controls", "mobileNavigation");
+    toggle.innerHTML = `
+        <span></span>
+        <span></span>
+        <span></span>
+    `;
+
+    navLinks.id = "mobileNavigation";
+    navbar.appendChild(toggle);
+
+    const closeMenu = () => {
+        navbar.classList.remove("nav-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open navigation menu");
+    };
+
+    toggle.addEventListener("click", () => {
+        const isOpen = navbar.classList.toggle("nav-open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        toggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") closeMenu();
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) closeMenu();
+    });
+}
+
+setupMobileNavigation();
+
 const configPromise = fetch("data/data.json")
     .then(response => {
         if (!response.ok) {
@@ -51,15 +99,15 @@ export async function getSheet(name) {
         throw new Error(`Failed to load Google Sheet "${name}": ${response.status}`);
     }
 
-    const text = await response.text();
-    const start = text.indexOf("{");
-    const end = text.lastIndexOf("}");
+    const responseText = await response.text();
+    const start = responseText.indexOf("{");
+    const end = responseText.lastIndexOf("}");
 
     if (start === -1 || end === -1 || end <= start) {
         throw new Error(`Invalid Google Sheets response for: ${name}`);
     }
 
-    const json = JSON.parse(text.slice(start, end + 1));
+    const json = JSON.parse(responseText.slice(start, end + 1));
     return json.table?.rows ?? [];
 }
 
