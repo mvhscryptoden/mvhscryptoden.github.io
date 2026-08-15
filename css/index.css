@@ -1,22 +1,25 @@
-/* ========== HERO ========== */
 .hero {
-    height: calc(100vh - 63px); /* Full viewport height minus navbar */
+    min-height: calc(100svh - 73px);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
+    padding: 40px;
 }
 
 .hero-content {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 40px;
+    width: min(100%, 900px);
 }
 
 .hero-logo {
-    height: 300px;
+    width: min(300px, 35vw);
+    height: auto;
 }
 
 .hero-content h1 {
@@ -26,128 +29,46 @@
 .hero-text {
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: left;
+    align-items: flex-start;
+    justify-content: center;
     text-align: left;
+    min-width: 0;
 }
 
 .tagline {
-    margin-top: 10px;
+    margin: 10px 0 0 3px;
     font-size: 1.1rem;
-    margin-left: 3px;
 }
 
-/* BUTTONS */
 .hero-buttons {
-    margin-top: 20px;
+    margin: 20px 0 0 3px;
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
-    justify-content: left;
-    margin-left: 3px;
 }
 
-/* HERO GLOW (optional aesthetic layer) */
+.hero-buttons .btn {
+    width: auto;
+}
+
 .hero-glow {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: var(--primary);
     filter: blur(250px);
     opacity: 0.25;
     z-index: -1;
-}
-
-/* EVENTS */
-.eventItem {
-    background: var(--card-bg);
-    border: 1px solid var(--gray);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: stretch;
-    height: fit-content;
-    overflow: hidden;
-}
-
-.eventItem:hover {
-    border-color: var(--accent);
-}
-
-.eventTitle {
-    color: var(--primary);
-    margin-bottom: 5px;
-}
-
-.eventInfo {
-    padding: 20px;
-}
-
-.eventInfo strong {
-    color: var(--secondary);
-}
-
-.eventDate {
-    width: 150px;
-    background: var(--secondary);
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.eventDate * {
-    color: var(--text);
-}
-
-.eventDay {
-    font-size: 4rem;
-}
-
-#eventsContainer {
-    display: flex;
-    flex-direction: column;
-}
-
-.eventInfoSpecial {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
-    margin-top: 20px;
-    gap: 15px;
-}
-
-.eventInfoSpecial p {
-    background: var(--primary);
-    width: fit-content;
-    height: fit-content;
-    padding: 5px 10px;
-    border-radius: 20px;
-}
-
-.eventInfoIcon {
-    scale: 1.2;
-    margin-right: 5px;
-}
-
-.eventButton {
-    width: fit-content;
-    align-self: center;
-    margin-top: 20px;
+    pointer-events: none;
 }
 
 .leadershipSpotlight {
     display: grid;
-    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
 }
 
-/* =========================
-   LEADER CARD (PRES + VP)
-========================= */
-
 .leaderCard {
+    min-width: 0;
     background: var(--card-color);
     border: 1px solid #2d2d2d;
     border-radius: 16px;
@@ -163,7 +84,6 @@
     border-color: var(--gray);
 }
 
-/* Leader image */
 .leaderCard img {
     width: 120px;
     height: 120px;
@@ -173,7 +93,6 @@
     flex-shrink: 0;
 }
 
-/* Leader text */
 .leaderName {
     color: var(--primary);
 }
@@ -188,4 +107,81 @@
     color: var(--text);
     margin-top: 10px;
     line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+    .hero {
+        min-height: auto;
+        padding: 70px 24px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .hero-logo {
+        width: min(240px, 55vw);
+    }
+
+    .hero-text {
+        align-items: center;
+        text-align: center;
+    }
+
+    .tagline,
+    .hero-buttons {
+        margin-left: 0;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .leadershipSpotlight {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 48px 14px 60px;
+    }
+
+    .hero-logo {
+        width: min(190px, 55vw);
+    }
+
+    .tagline {
+        font-size: 0.95rem;
+        max-width: 340px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: min(100%, 320px);
+        gap: 10px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .leaderCard {
+        align-items: flex-start;
+        padding: 16px;
+    }
+
+    .leaderCard img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 420px) {
+    .leaderCard {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
