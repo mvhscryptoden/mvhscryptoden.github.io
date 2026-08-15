@@ -20,32 +20,54 @@ async function loadOfficers() {
 
         officers.forEach(officer => {
             const isLeader = ["President", "Vice President"].includes(officer.position);
-            const card = document.createElement("div");
+
+            const card = document.createElement("article");
 
             if (isLeader) {
-                card.className = "leaderCard";
+                card.className = "officerCard";
+
                 card.innerHTML = `
-                    <img loading="lazy" src="${officer.image}" alt="${officer.name}">
-                    <div>
+                    <img
+                        loading="lazy"
+                        src="${officer.image}"
+                        alt="${officer.name}"
+                    >
+
+                    <div class="officerCardContent">
                         <h2 class="leaderName">${officer.name}</h2>
                         <h3 class="leaderPosition">${officer.position}</h3>
                         <p class="leaderBio">${officer.bio}</p>
                     </div>
                 `;
 
-                if (spotlight) spotlight.appendChild(card);
-            } else if (grid) {
-                card.className = "officerCard";
+                if (spotlight) {
+                    spotlight.appendChild(card);
+                }
+
+                return;
+            }
+
+            if (grid) {
+                card.className = "secondaryOfficerCard";
+
                 card.innerHTML = `
-                    <img loading="lazy" src="${officer.image}" alt="${officer.name}">
-                    <h2 class="leaderName">${officer.name}</h2>
-                    <h3 class="leaderPosition">${officer.position}</h3>
-                    <p class="leaderBio">${officer.bio}</p>
+                    <img
+                        loading="lazy"
+                        src="${officer.image}"
+                        alt="${officer.name}"
+                    >
+
+                    <div class="secondaryOfficerContent">
+                        <h2 class="officerName">${officer.name}</h2>
+                        <h3 class="leaderPosition">${officer.position}</h3>
+                        <p class="leaderBio">${officer.bio}</p>
+                    </div>
                 `;
 
                 grid.appendChild(card);
             }
         });
+
     } catch (err) {
         console.error("Failed to load officers:", err);
     }
@@ -58,12 +80,18 @@ function displayLeadershipPreview(officers) {
 
     officers.forEach(officer => {
         const card = document.createElement("div");
+
         card.className = "leadershipPreviewCard";
 
         card.innerHTML = `
-            <img loading="lazy" src="${officer.image}" alt="${officer.name}">
+            <img
+                loading="lazy"
+                src="${officer.image}"
+                alt="${officer.name}"
+            >
+
             <div>
-                <h3>${officer.name}</h3>
+                <h2>${officer.name}</h2>
                 <p>${officer.position}</p>
             </div>
         `;

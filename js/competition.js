@@ -34,19 +34,33 @@ export async function loadComp() {
             card.className = "compCard";
 
             card.innerHTML = `
-                <div class="compCardHeader">
-                    <h1>${comp.compName}</h1>
-                    <p class="compPassword">
-                        Password: <span class="textUnderline">${comp.compPassword}</span>
-                    </p>
+            <div class="competitionHeader">
+                <span class="competitionStatus">CURRENT COMPETITION</span>
+                <h1>${comp.compName}</h1>
+                <p>Put your investment strategy to the test.</p>
+            </div>
+
+            <div class="competitionDetails">
+                <div class="competitionDetail">
+                    <span class="detailLabel">DATES</span>
+                    <strong>${comp.compStart} — ${comp.compEnd}</strong>
                 </div>
-                <p class="compDates">
-                    Competition Dates: <span class="textUnderline">${comp.compStart}</span>
-                    through <span class="textUnderline">${comp.compEnd}</span>
-                </p>
-                <a href="${comp.compLink}" class="btn secondary viewCompButton" target="_blank" rel="noopener noreferrer">
-                    View Competition
-                </a>
+
+                <div class="competitionDetail">
+                    <span class="detailLabel">ACCESS PASSWORD</span>
+                    <strong class="competitionPassword">${comp.compPassword}</strong>
+                </div>
+            </div>
+
+            <a
+                href="${comp.compLink}"
+                class="btn primary competitionButton"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Enter Competition
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
             `;
 
             compSection.appendChild(card);

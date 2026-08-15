@@ -133,7 +133,7 @@ footer.stickyFooter { position: static; width: 100%; }
 .btn.secondary:hover { background: var(--primary); color: black; }
 span.textUnderline { text-decoration-line: underline; text-decoration-style: dashed; text-decoration-thickness: 2px; text-underline-offset: 6px; }
 
-@media (max-width: 900px) {
+@media (max-width: 942px) {
     .navbar { flex-direction: row; align-items: center; padding: 12px 20px; gap: 12px; }
     .nav-toggle { display: block; }
     .nav-links {
