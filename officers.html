@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the Crypto Den officers at Mission Vista High School.">
     <title>Officers | Crypto Den</title>
 
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/officers.css">
     <link rel="stylesheet" href="css/leadership.css">
-    
     <link rel="icon" type="image/x-icon" href="media/logo.png">
-    
     <script src="https://kit.fontawesome.com/aebd67e261.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-
     <header class="navbar">
-        <div id="bounceTxt" class="logo">CRYPTO DEN</div>
-
-        <nav class="nav-links">
+        <a href="index.html" id="bounceTxt" class="logo" aria-label="Crypto Den home">CRYPTO DEN</a>
+        <nav class="nav-links" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a class="nav-active" href="officers.html">Officers</a>
+            <a href="officers.html" class="nav-active" aria-current="page">Officers</a>
             <a href="calendar.html">Calendar</a>
             <a href="competition.html">Competition</a>
             <a href="archives.html">Archives</a>
@@ -34,107 +29,65 @@
         </nav>
     </header>
 
-    <section class="heroSection section">
+    <main>
+        <section class="heroSection section">
+            <h1 class="pageTitle">Leadership</h1>
+            <div class="leadershipSpotlight" id="leadershipSpotlight"></div>
+            <div class="officerGrid" id="officerGrid"></div>
+        </section>
 
-        <h1 class="pageTitle">Leadership</h1>
+        <section class="section officerFaq">
+            <h2 class="pageTitle">Officer FAQ</h2>
 
-        <!-- REST OF OFFICERS -->
-        <div class="officerGrid" id="officerGrid"></div>
+            <div class="faqItem">
+                <h3 class="faqQuestion"><span class="faqSpecial">Q:</span> How do I become an officer?</h3>
+                <p class="faqAnswer"><span class="faqSpecial">A:</span> Officers are elected once per year for the following school year. Students interested in becoming officers may declare their candidacy approximately one month before elections. Club members then vote, and the student with the most votes is selected for each role.</p>
+            </div>
 
-        <!-- TOP LEADERS -->
-        <div class="leadershipSpotlight" id="leadershipSpotlight"></div>
+            <div class="faqItem">
+                <h3 class="faqQuestion"><span class="faqSpecial">Q:</span> What does being an officer entail?</h3>
+                <p class="faqAnswer"><span class="faqSpecial">A:</span> Officers help lead the club by organizing meetings, coordinating competitions and events, promoting the club, completing required paperwork, communicating with members, and helping the club run smoothly throughout the school year.</p>
+            </div>
 
-    </section>
+            <div class="faqItem">
+                <h3 class="faqQuestion"><span class="faqSpecial">Q:</span> How much time does being an officer require?</h3>
+                <p class="faqAnswer"><span class="faqSpecial">A:</span> The time commitment varies by position and upcoming events. Officers are expected to attend meetings regularly and may spend additional time planning activities, communicating with members, completing paperwork, and preparing for competitions.</p>
+            </div>
 
-    <section class="section officerFaq">
-        <h1 class="pageTitle">
-            Officer Faq
-        </h1>
-        <div class="faqItem">
-            <h3 class="faqQuestion"><span class="faqSpecial">Q:</span> How do I become an officer?</h3>
-            <p class="faqAnswer">
-                <span class="faqSpecial">A:</span> Officers are elected once per year for the following school year.
-                Students interested in becoming officers may declare their candidacy approximately one month before elections.
-                During this period, multiple candidates may run for the same position.
-                Club members then vote, and the student with the most votes is selected for each role.
-            </p>
-        </div>
-        <div class="faqItem">
-            <h3 class="faqQuestion"><span class="faqSpecial">Q:</span> What does being an officer entail?</h3>
-            <p class="faqAnswer">
-                <span class="faqSpecial">A:</span> Officers help lead the club by organizing meetings, coordinating 
-                competitions and events, and promoting the club to prospective members. They are also responsible for 
-                completing required club paperwork, communicating with members, managing club operations, and ensuring 
-                the club runs smoothly throughout the school year.
-            </p>
-        </div>
-        <div class="faqItem">
-            <h3 class="faqQuestion"><span class="faqSpecial">Q:</span> How much time does being an officer require?</h3>
-            <p class="faqAnswer">
-                <span class="faqSpecial">A:</span>The time commitment varies depending on the position and upcoming events. 
-                Officers are expected to attend meetings regularly and may spend additional time planning activities, 
-                communicating with members, completing paperwork, and preparing for competitions.
-            </p>
-        </div>
-        <div class="faqItem">
-            <h3 class="faqQuestion"><span class="faqSpecial">Q:</span> Can officers participate in competitions?</h3>
-            <p class="faqAnswer">
-                <span class="faqSpecial">A:</span> Yes! Officers are encouraged to participate in competitions alongside other
-                 members. However, officers may also have additional responsibilities before, during, and after events to help
-                  coordinate club activities.
-            </p>
-        </div>
-        <div class="faqItem">
-            <h3 class="faqQuestion"><span class="faqSpecial">Q:</span> What positions are available?</h3>
-            <p class="faqAnswer">
-                <span class="faqSpecial">A:</span> Officer positions typically include President, Vice President, Secretary,
-                 Treasurer, and other roles as needed. Each position has different responsibilities that contribute to the
-                  operation and growth of the club.
-            </p>
-        </div>
-        <div class="faqButtons">
-            <button class="btn primary faqButton"><a href="elections page">Become an officer!</a></button>
-            <button class="btn secondary faqButton"><a href="contact or something">Learn More</a></button>
-        </div>
-    </section>
+            <div class="faqItem">
+                <h3 class="faqQuestion"><span class="faqSpecial">Q:</span> Can officers participate in competitions?</h3>
+                <p class="faqAnswer"><span class="faqSpecial">A:</span> Yes! Officers are encouraged to participate in competitions alongside other members. They may also have additional responsibilities to help coordinate club activities.</p>
+            </div>
 
-    <!-- FOOTER -->
+            <div class="faqItem">
+                <h3 class="faqQuestion"><span class="faqSpecial">Q:</span> What positions are available?</h3>
+                <p class="faqAnswer"><span class="faqSpecial">A:</span> Officer positions typically include President, Vice President, Secretary, Treasurer, and other roles as needed. Each position has different responsibilities that contribute to the operation and growth of the club.</p>
+            </div>
+
+            <div class="faqButtons">
+                <a class="btn primary faqButton" href="mailto:mvhscryptoden@gmail.com?subject=Officer%20Candidacy">Ask About Becoming an Officer</a>
+                <a class="btn secondary faqButton" href="mailto:mvhscryptoden@gmail.com?subject=Officer%20Question">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
     <footer>
         <div class="footerConnect">
             <h3 class="footerConnectTitle">Connect with us</h3>
-
             <div class="footerLinks">
-                <a id="instagramLink" href="https://www.instagram.com/mvhscryptoden/" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <a id="githubLink" href="https://www.github.com/mvhscryptoden/" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-
-                <a class="competitionNav" href="https://www.htmw.com/mvhscryptoden/" target="_blank">
-                    <i class="fa-solid fa-chart-line"></i>
-                </a>
-
-                <a id="emailLink" href="mailto:mvhscryptoden@gmail.com">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
+                <a id="instagramLink" href="https://www.instagram.com/mvhscryptoden/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a id="githubLink" href="https://www.github.com/mvhscryptoden/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                <a class="competitionNav" href="https://www.htmw.com/mvhscryptoden/" target="_blank" rel="noopener noreferrer" aria-label="HowTheMarketWorks"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></a>
+                <a id="emailLink" href="mailto:mvhscryptoden@gmail.com" aria-label="Email Crypto Den"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
             </div>
         </div>
-
         <div class="footerBottom">
-            <p class="footerCopyright">
-                © 2026 Crypto Den | Mission Vista High School
-            </p>
-
-            <p class="footerCredit">
-                Built by Dawson Spies
-            </p>
+            <p class="footerCopyright">© 2026 Crypto Den | Mission Vista High School</p>
+            <p class="footerCredit">Built by Dawson Spies</p>
         </div>
     </footer>
 
     <script type="module" src="js/global.js"></script>
     <script type="module" src="js/officers.js"></script>
-
 </body>
 </html>
