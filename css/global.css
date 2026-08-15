@@ -360,3 +360,10 @@ footer.stickyFooter {
 .lowContentFooter {
     top: 75vh;
 }
+
+span.textUnderline{
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 2px;     /* Thickness of the dashes */
+    text-underline-offset: 6px;         /* Distance from the text */
+}

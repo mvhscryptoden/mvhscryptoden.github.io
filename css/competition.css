@@ -1,0 +1,32 @@
+#compSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.compCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.compCardHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+p.compPassword {
+    position: relative;
+    align-self: center;
+    text-align: right;
+    margin: auto 0 auto auto;
+}
+
+p.compDates {
+    margin: 10px 0px;
+}
+
+.viewCompButton {
+    max-width: 150px;
+    text-align: center;
+    
+}
