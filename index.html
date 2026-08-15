@@ -1,9 +1,9 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CryptoDen is Mission Vista High School's finance and investment club." />
     <title>Home | CryptoDen MVHS</title>
 
     <link rel="stylesheet" href="css/global.css">
@@ -11,198 +11,113 @@
     <link rel="stylesheet" href="css/events.css">
     <link rel="stylesheet" href="css/leadership.css">
     <link rel="stylesheet" href="css/announcements.css">
-
     <link rel="icon" type="image/x-icon" href="media/logo.png">
-
     <script src="https://kit.fontawesome.com/aebd67e261.js" crossorigin="anonymous"></script>
-    </head>
+</head>
+<body>
+    <header class="navbar">
+        <a id="bounceTxt" class="logo" href="index.html" aria-label="CryptoDen home">CRYPTO DEN</a>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a class="nav-active" href="index.html" aria-current="page">Home</a>
+            <a href="about.html">About</a>
+            <a href="officers.html">Officers</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="competition.html">Competition</a>
+            <a href="archives.html">Archives</a>
+            <a href="news.html">News</a>
+            <a href="support.html">Support</a>
+            <a href="photos.html">Photos</a>
+            <a href="join.html" class="nav-cta">Join</a>
+        </nav>
+    </header>
 
-    <body>
-
-        <!-- NAVBAR -->
-        <header class="navbar">
-            <div id="bounceTxt" class="logo">CRYPTO DEN</div>
-
-            <nav class="nav-links">
-                <a class="nav-active" href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="officers.html">Officers</a>
-                <a href="calendar.html">Calendar</a>
-                <a href="competition.html">Competition</a>
-                <a href="archives.html">Archives</a>
-                <a href="news.html">News</a>
-                <a href="support.html">Support</a>
-                <a href="photos.html">Photos</a>
-                <a href="join.html" class="nav-cta">Join</a>
-            </nav>
-        </header>
-
-        <!-- HERO -->
-        <section class="hero">
+    <main>
+        <section class="hero" aria-labelledby="heroTitle">
             <div class="hero-content">
                 <div>
-                    <img loading="lazy" class="hero-logo" src="media/logo.png" alt="Crypto Den Logo">
+                    <img loading="lazy" class="hero-logo" src="media/logo.png" alt="CryptoDen logo">
                 </div>
                 <div class="hero-text">
-                    <h1>CRYPTO DEN</h1>
-                    <p class="tagline">Mission Vista High School's Finance & Investment Club</p>
-
+                    <h1 id="heroTitle">CRYPTO DEN</h1>
+                    <p class="tagline">Mission Vista High School's Finance &amp; Investment Club</p>
                     <div class="hero-buttons">
                         <a href="join.html" class="btn primary">Join Crypto Den</a>
                         <a href="about.html" class="btn secondary">View Club Info</a>
                     </div>
                 </div>
             </div>
-
-            <div class="hero-glow"></div>
+            <div class="hero-glow" aria-hidden="true"></div>
         </section>
 
-        <!-- UPCOMING EVENTS -->
-        <section class="section eventSection">
-            <h2 class="section-header">
-                <i class="fa-regular fa-calendar-days"></i>
+        <section class="section eventSection" aria-labelledby="eventsTitle">
+            <h2 id="eventsTitle" class="section-header">
+                <i class="fa-regular fa-calendar-days" aria-hidden="true"></i>
                 Upcoming Events
             </h2>
             <div class="card cardNoHover">
-                <div id="upcomingEventsContainer" class="grid">
-                    <!-- index.js should fill in this from calendar.json -->
-                    <!-- EVENT TEMPLATE -->
-                    <!-- <div class="eventItem">
-                    <div class="eventDate">
-                        <h1 class="eventDay">8</h1>
-                        <p class="eventMonthYear">Nov 2027</p>
-                    </div>
-                    <div class="eventInfo">
-                        <h3 class="eventTitle">Club Meeting</h3>
-                        <p class="eventDetails"><strong>Details:</strong> ${event.details}</p>
-                        <p class="eventLocation"><strong>Location:</strong> ${event.location}</p>
-                        <p class="eventHost"><strong>Host:</strong> ${event.host}</p>
-                        <div class="eventInfoSpecial">
-                            <div class="eventTime">
-                                <p>
-                                    <i class="fa-regular fa-clock eventInfoIcon"></i>
-                                    ${event.time}
-                                </p>
-                            </div>
-                            <div class="eventLocation">
-                                <p>
-                                    <i class="fa-solid fa-location-dot eventInfoIcon"></i>
-                                    ${event.location}
-                                </p>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-
+                <div id="upcomingEventsContainer" class="grid"></div>
                 <p class="eventButton">Looking for more events?</p>
                 <a href="calendar.html" class="btn secondary eventButton">View All Events</a>
             </div>
         </section>
 
-        <!-- ANNOUNCEMENTS -->
-        <section class="section">
-            <h2 class="section-header">Announcements</h2>
-            <div id="newsContainer" class="grid">
-
-            <!--<div class="card">
-                    <div class="announcementTitleHolder">
-                        <h3 class="announcementTitle">${news.title}</h3>
-                        <p class="announcementUrgency ${news.urgency.toLowerCase()}">
-                            ${news.urgency}
-                        </p>
-                    </div>
-
-                    <p class="announcementContent">
-                        ${news.content}
-                    </p>
-
-                    <div class="announcementFooter">
-                        <small>Posted by ${news.author}</small>
-                        <small>${formatAnnouncementDate(news.date)}</small>
-                    </div>
-                </div>
-
-                <div class="card caughtUpCard">
-                    <h2>All caught up!</h2>
-                    <p>Im sure there will be more soon...</p>
-                </div>-->
-
-            </div>
-
+        <section class="section" aria-labelledby="announcementsTitle">
+            <h2 id="announcementsTitle" class="section-header">Announcements</h2>
+            <div id="newsContainer" class="grid"></div>
         </section>
 
-        <!-- WHY JOIN -->
-        <section class="section">
-            <h2 class="section-header">Why Join Crypto Den?</h2>
+        <section class="section" aria-labelledby="whyJoinTitle">
+            <h2 id="whyJoinTitle" class="section-header">Why Join Crypto Den?</h2>
             <div class="grid">
-                <div class="card">
+                <article class="card">
                     <h3 class="cardHeader">Learn investing fundamentals</h3>
-                    <p class="cardText">Understand the basics of stocks, cryptocurrencies, markets, 
-                        and investment strategies through hands-on learning.</p>
-                </div>
-
-                <div class="card">
+                    <p class="cardText">Understand the basics of stocks, cryptocurrencies, markets, and investment strategies through hands-on learning.</p>
+                </article>
+                <article class="card">
                     <h3 class="cardHeader">Compete in real stock / crypto simulations</h3>
-                    <p class="cardText">Put your knowledge to the test with simulated trading competitions
-                         using real market data and strategies.</p>
-                </div>
-
-                <div class="card">
+                    <p class="cardText">Put your knowledge to the test with simulated trading competitions using real market data and strategies.</p>
+                </article>
+                <article class="card">
                     <h3 class="cardHeader">Develop financial literacy</h3>
-                    <p class="cardText">Build practical skills in budgeting, investing, risk management, 
-                        and making informed financial decisions.</p>
-                </div>
+                    <p class="cardText">Build practical skills in budgeting, investing, risk management, and making informed financial decisions.</p>
+                </article>
             </div>
         </section>
 
-        <!-- OFFICER PREVIEW -->
-        <section class="section leadershipSection">
-            <h2 class="section-header">Leadership Preview</h2>
+        <section class="section leadershipSection" aria-labelledby="leadershipTitle">
+            <h2 id="leadershipTitle" class="section-header">Leadership Preview</h2>
             <div class="leadershipPreview" id="leadershipPreview"></div>
-            <a href="officers.html" class="btn secondary leadershipButton">
-                Meet the Leadership Team
-            </a>
+            <a href="officers.html" class="btn secondary leadershipButton">Meet the Leadership Team</a>
         </section>
+    </main>
 
-        <!-- FOOTER -->
-        <footer>
-            <div class="footerConnect">
-                <h3 class="footerConnectTitle">Connect with us</h3>
-
-                <div class="footerLinks">
-                    <a id="instagramLink" href="https://www.instagram.com/mvhscryptoden/" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a id="githubLink" href="https://www.github.com/mvhscryptoden/" target="_blank">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-
-                    <a class="competitionNav" href="https://www.htmw.com/mvhscryptoden/" target="_blank">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </a>
-
-                    <a id="emailLink" href="mailto:mvhscryptoden@gmail.com">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
-                </div>
+    <footer>
+        <div class="footerConnect">
+            <h3 class="footerConnectTitle">Connect with us</h3>
+            <div class="footerLinks">
+                <a id="instagramLink" href="https://www.instagram.com/mvhscryptoden/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a id="githubLink" href="https://www.github.com/mvhscryptoden/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <a class="competitionNav" href="https://www.htmw.com/mvhscryptoden/" target="_blank" rel="noopener noreferrer" aria-label="HowTheMarketWorks">
+                    <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                </a>
+                <a id="emailLink" href="mailto:mvhscryptoden@gmail.com" aria-label="Email CryptoDen">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </a>
             </div>
+        </div>
+        <div class="footerBottom">
+            <p class="footerCopyright">© 2026 Crypto Den | Mission Vista High School</p>
+            <p class="footerCredit">Built by Dawson Spies</p>
+        </div>
+    </footer>
 
-            <div class="footerBottom">
-                <p class="footerCopyright">
-                    © 2026 Crypto Den | Mission Vista High School
-                </p>
-
-                <p class="footerCredit">
-                    Built by Dawson Spies
-                </p>
-            </div>
-        </footer>
-
-        <script type="module" src="js/global.js"></script>
-        <script type="module" src="js/events.js"></script>
-        <script type="module" src="js/officers.js"></script>
-        <script type="module" src="js/announcements.js"></script>
-
-    </body>
-    </html>
+    <script type="module" src="js/global.js"></script>
+    <script type="module" src="js/events.js"></script>
+    <script type="module" src="js/officers.js"></script>
+    <script type="module" src="js/announcements.js"></script>
+</body>
+</html>
