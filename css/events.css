@@ -1,58 +1,57 @@
-/* EVENT TITLE */
 .eventTitleHolder {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: 16px;
     width: 100%;
 }
 
 .eventTitle {
     color: var(--primary);
-    margin: 0 0 5px 0;
+    margin: 0 0 5px;
 }
 
 .eventID {
     margin: 0;
     opacity: 0.6;
     font-size: 0.9rem;
+    white-space: nowrap;
 }
 
-
-/* EVENTS */
 .eventItem {
+    display: flex;
+    width: 100%;
     background: var(--card-bg);
     border: 1px solid var(--gray);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: stretch;
-    height: fit-content;
+    border-radius: 12px;
     overflow: hidden;
+    transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .eventItem:hover {
     border-color: var(--accent);
+    transform: translateY(-2px);
 }
 
 .eventInfo {
-    padding: 20px;
     flex: 1;
+    min-width: 0;
+    padding: 20px;
 }
 
 .eventInfo strong {
     color: var(--secondary);
 }
 
-
-/* EVENT DATE */
 .eventDate {
     width: 150px;
+    flex: 0 0 150px;
     background: var(--secondary);
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .eventDate * {
@@ -60,57 +59,66 @@
 }
 
 .eventDay {
-    font-size: 4rem;
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
-
-/* EVENT LIST */
-#eventsContainer {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0px;
-}
-
-#highlightedEventContainer {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0px;
-}
-
+#eventsContainer,
+#highlightedEventContainer,
 #upcomingEventsContainer {
     display: flex;
     flex-direction: column;
-    padding: 0px;
+    gap: 16px;
 }
 
+#eventsContainer,
+#highlightedEventContainer {
+    padding: 20px 0;
+}
 
-/* EVENT DETAILS */
 .eventInfoSpecial {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: left;
+    gap: 10px;
     margin-top: 20px;
-    gap: 15px;
 }
 
 .eventInfoSpecial p {
-    background: var(--primary);
     width: fit-content;
-    height: fit-content;
-    padding: 5px 10px;
+    margin: 0;
+    padding: 6px 10px;
     border-radius: 20px;
+    background: var(--primary);
 }
 
 .eventInfoIcon {
-    scale: 1.2;
     margin-right: 5px;
 }
 
-
-/* EVENT BUTTON */
 .eventButton {
     width: fit-content;
     align-self: center;
     margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .eventItem {
+        flex-direction: column;
+    }
+
+    .eventDate {
+        width: 100%;
+        flex-basis: auto;
+        padding: 14px;
+    }
+
+    .eventDay {
+        font-size: 2.5rem;
+    }
+
+    .eventTitleHolder {
+        flex-direction: column;
+        gap: 4px;
+    }
 }
