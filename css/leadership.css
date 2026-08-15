@@ -1,19 +1,11 @@
-/* =========================
-   LEADERSHIP SPOTLIGHT (TOP 2)
-========================= */
-
 .leadershipSpotlight {
     display: grid;
-    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
-    padding: 20px 40px;
 }
 
-/* =========================
-   LEADER CARD (PRES + VP)
-========================= */
-
 .leaderCard {
+    min-width: 0;
     background: var(--card-color);
     border: 1px solid #2d2d2d;
     border-radius: 16px;
@@ -29,7 +21,6 @@
     border-color: var(--gray);
 }
 
-/* Leader image */
 .leaderCard img {
     width: 120px;
     height: 120px;
@@ -39,7 +30,6 @@
     flex-shrink: 0;
 }
 
-/* Leader text */
 .leaderName {
     color: var(--primary);
 }
@@ -56,30 +46,21 @@
     line-height: 1.4;
 }
 
-/* =========================
-   OFFICER GRID (REST OF TEAM)
-========================= */
-
 .officerGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     align-items: start;
     gap: 15px;
-    padding: 20px 40px;
 }
 
-/* =========================
-   OFFICER CARD (STANDARD)
-========================= */
-
 .officerCard {
+    min-width: 0;
     background: var(--card-color);
     border: 1px solid #2d2d2d;
     border-radius: 14px;
     padding: 16px;
     display: flex;
     flex-direction: column;
-    gap: 0px;
     transition: 0.2s ease;
 }
 
@@ -88,19 +69,13 @@
     border-color: var(--gray);
 }
 
-/* Officer image */
 .officerCard img {
     width: 100%;
     height: 220px;
     object-fit: cover;
     border-radius: 12px;
     border: 2px solid var(--primary);
-    flex-shrink: 0;
 }
-
-    /* =========================
-   TEXT CONSISTENCY
-========================= */
 
 .officerCard h2,
 .officerCard h3,
@@ -119,29 +94,23 @@
         opacity: 0;
         transform: translateY(8px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* =========================
-   HOMEPAGE LEADERSHIP PREVIEW
-========================= */
-
-/* =========================
-   HOMEPAGE LEADERSHIP PREVIEW
-========================= */
-
 .leadershipPreview {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
 }
 
 .leadershipPreviewCard {
+    width: min(240px, 100%);
+    min-height: 300px;
     background: var(--card-color);
     border: 1px solid #2d2d2d;
     border-radius: 12px;
@@ -151,8 +120,6 @@
     align-items: center;
     text-align: center;
     gap: 10px;
-    width: 240px;
-    height: 300px;
     transition: 0.2s ease;
 }
 
@@ -183,4 +150,51 @@
     display: block;
     width: fit-content;
     margin: 20px auto 0;
+}
+
+@media (max-width: 700px) {
+    .leadershipSpotlight {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .officerGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .officerCard {
+        padding: 12px;
+    }
+
+    .officerCard img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .leaderCard {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .leaderCard img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .officerGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .officerCard img {
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .leadershipPreviewCard {
+        width: 100%;
+        max-width: 280px;
+    }
 }
