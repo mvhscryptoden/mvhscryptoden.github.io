@@ -1,53 +1,40 @@
 .leadershipSpotlight {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-    margin-top: 24px;
+    gap: 25px;
 }
 
 .leaderCard {
     min-width: 0;
     background: var(--card-color);
-    border: 1px solid var(--border);
+    border: 1px solid #2d2d2d;
     border-radius: 16px;
-    padding: 24px;
+    padding: 20px;
     display: flex;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
-    text-align: left;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    transition: 0.2s ease;
 }
 
-.leaderCard:hover,
-.officerCard:hover,
-.leadershipPreviewCard:hover {
-    transform: translateY(-4px);
-    border-color: var(--primary);
-}
-
-.leaderCard img,
-.officerCard img,
-.leadershipPreviewCard img {
-    object-fit: cover;
-    object-position: center;
-    border: 2px solid var(--primary);
-    background: var(--bg);
-    flex-shrink: 0;
+.leaderCard:hover {
+    transform: translateY(-6px);
+    border-color: var(--gray);
 }
 
 .leaderCard img {
-    width: 150px;
-    height: 150px;
-    border-radius: 14px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid var(--primary);
+    flex-shrink: 0;
 }
 
-.leaderName,
-.leadershipPreviewCard h3 {
+.leaderName {
     color: var(--primary);
 }
 
-.leaderPosition,
-.leadershipPreviewCard p {
+.leaderPosition {
     color: var(--secondary);
     margin-top: 5px;
     line-height: 1.4;
@@ -56,33 +43,38 @@
 .leaderBio {
     color: var(--text);
     margin-top: 10px;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .officerGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 24px;
-    margin-top: 24px;
+    align-items: start;
+    gap: 15px;
 }
 
 .officerCard {
     min-width: 0;
     background: var(--card-color);
-    border: 1px solid var(--border);
+    border: 1px solid #2d2d2d;
     border-radius: 14px;
     padding: 16px;
     display: flex;
     flex-direction: column;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    transition: 0.2s ease;
+}
+
+.officerCard:hover {
+    transform: translateY(-5px);
+    border-color: var(--gray);
 }
 
 .officerCard img {
     width: 100%;
-    aspect-ratio: 1 / 1;
-    height: auto;
+    height: 220px;
+    object-fit: cover;
     border-radius: 12px;
-    margin-bottom: 14px;
+    border: 2px solid var(--primary);
 }
 
 .officerCard h2,
@@ -98,59 +90,85 @@
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .leadershipPreview {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 240px));
+    display: flex;
     justify-content: center;
-    gap: 24px;
-    padding: 24px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
 }
 
 .leadershipPreviewCard {
-    width: 100%;
-    min-height: 0;
+    width: min(240px, 100%);
+    min-height: 300px;
     background: var(--card-color);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 16px;
+    border: 1px solid #2d2d2d;
+    border-radius: 12px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 10px;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    transition: 0.2s ease;
+}
+
+.leadershipPreviewCard:hover {
+    transform: translateY(-5px);
+    border-color: var(--gray);
 }
 
 .leadershipPreviewCard img {
     width: 100%;
-    aspect-ratio: 1 / 1;
-    height: auto;
-    border-radius: 12px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10%;
+    border: 2px solid var(--primary);
+}
+
+.leadershipPreviewCard h3 {
+    margin: 0;
+    color: var(--primary);
+}
+
+.leadershipPreviewCard p {
+    margin: 0;
+    color: var(--secondary);
 }
 
 .leadershipButton {
     display: block;
     width: fit-content;
-    margin: 4px auto 0;
+    margin: 20px auto 0;
 }
 
 @media (max-width: 700px) {
     .leadershipSpotlight {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 15px;
     }
 
     .officerGrid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
+        gap: 12px;
     }
 
-    .leaderCard {
-        padding: 20px;
+    .officerCard {
+        padding: 12px;
+    }
+
+    .officerCard img {
+        height: 180px;
     }
 }
 
@@ -159,27 +177,24 @@
         flex-direction: column;
         text-align: center;
         align-items: center;
-        gap: 14px;
     }
 
     .leaderCard img {
-        width: 140px;
-        height: 140px;
+        width: 110px;
+        height: 110px;
     }
 
-    .officerGrid,
-    .leadershipPreview {
+    .officerGrid {
         grid-template-columns: 1fr;
-        gap: 18px;
     }
 
-    .officerCard img,
-    .leadershipPreviewCard img {
+    .officerCard img {
+        height: auto;
         aspect-ratio: 1 / 1;
     }
 
     .leadershipPreviewCard {
+        width: 100%;
         max-width: 280px;
-        margin: 0 auto;
     }
 }
