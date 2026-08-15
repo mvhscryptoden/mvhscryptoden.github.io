@@ -23,14 +23,26 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
     background: var(--bg);
     color: var(--text);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
 h1, h2, h3, h4, h5 {
@@ -65,6 +77,7 @@ a {
     justify-content: space-between;
     align-items: center;
     gap: 24px;
+    width: 100%;
     padding: 15px 30px;
     background: var(--nav-bg);
     backdrop-filter: blur(12px);
@@ -78,7 +91,8 @@ a {
     letter-spacing: 2px;
     border-bottom: 2px solid var(--primary);
     padding-bottom: 6px;
-    cursor: default;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .nav-links {
@@ -87,6 +101,7 @@ a {
     justify-content: flex-end;
     flex-wrap: wrap;
     gap: 6px 18px;
+    min-width: 0;
 }
 
 .nav-links a {
@@ -95,6 +110,7 @@ a {
     font-size: 14px;
     position: relative;
     display: inline-block;
+    white-space: nowrap;
 }
 
 .nav-links a::after {
@@ -135,7 +151,7 @@ a {
 }
 
 section.hero {
-    min-height: calc(100vh - 73px);
+    min-height: calc(100svh - 73px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,6 +219,7 @@ section.hero {
 }
 
 footer {
+    width: 100%;
     padding: 20px;
     background: var(--nav-bg);
     border-top: 1px solid #222;
@@ -256,6 +273,7 @@ footer.stickyFooter {
 }
 
 .card {
+    min-width: 0;
     background: var(--card-color);
     border: 1px solid #101010;
     border-radius: 14px;
@@ -281,10 +299,12 @@ footer.stickyFooter {
 
 .btn {
     display: inline-block;
+    max-width: 100%;
     padding: 10px 16px;
     border-radius: 8px;
     text-decoration: none;
     font-size: 14px;
+    text-align: center;
 }
 
 .btn.primary {
@@ -316,13 +336,33 @@ span.textUnderline {
 
 @media (max-width: 900px) {
     .navbar {
-        align-items: flex-start;
+        align-items: stretch;
         flex-direction: column;
+        gap: 12px;
+        padding: 12px 20px;
+    }
+
+    .logo {
+        align-self: flex-start;
     }
 
     .nav-links {
         width: 100%;
         justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 2px 2px 8px;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-links a {
+        flex: 0 0 auto;
     }
 
     .footerCredit {
@@ -333,29 +373,87 @@ span.textUnderline {
 }
 
 @media (max-width: 600px) {
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.7rem; }
-    h3 { font-size: 1.4rem; }
+    h1 { font-size: clamp(1.8rem, 8vw, 2.2rem); }
+    h2 { font-size: clamp(1.5rem, 7vw, 1.8rem); }
+    h3 { font-size: clamp(1.25rem, 6vw, 1.45rem); }
 
     .navbar {
-        padding: 12px 18px;
+        padding: 10px 14px;
+        gap: 9px;
+    }
+
+    .logo {
+        font-size: 0.95rem;
+        letter-spacing: 1.5px;
     }
 
     .nav-links {
-        gap: 10px 14px;
+        gap: 8px 16px;
+        padding-bottom: 5px;
     }
 
     .nav-links a {
-        font-size: 13px;
+        font-size: 12px;
+    }
+
+    .nav-cta {
+        padding: 5px 9px;
     }
 
     .section,
     .pageEndContent {
-        width: min(100% - 32px, 1100px);
-        padding: 40px 0;
+        width: calc(100% - 28px);
+        padding: 36px 0;
     }
 
     section.hero {
-        padding: 32px 16px;
+        min-height: calc(100svh - 105px);
+        padding: 28px 14px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .footerLinks {
+        gap: 18px;
+    }
+
+    .footerLinks a {
+        font-size: 1.75rem;
+    }
+
+    footer {
+        padding: 18px 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .nav-links {
+        gap: 8px 13px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .section,
+    .pageEndContent {
+        width: calc(100% - 22px);
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
     }
 }
