@@ -2,14 +2,8 @@
     "googleSheets": {
         "officers": "https://docs.google.com/spreadsheets/d/1LhjNI1dNun1qJwnqo9BpROAD-tWaZdhTvO-oQ9iX7VQ/gviz/tq?tqx=out:json&gid=0",
         "events": "https://docs.google.com/spreadsheets/d/1eYvmfAS5VZXFz1xJl9FxCmVOVfpm-VIMh7wG8O9P6qY/gviz/tq?tqx=out:json&gid=0",
-        "announcements": "https://docs.google.com/spreadsheets/d/1tXeIbb3GnXoRVfBg7_okmREylMohN3jY-jh7IgKio6A/gviz/tq?tqx=out:json&gid=1470706732"
-    },
-
-    "links": {
-        "htmw": "",
-        "github": "https://www.github.com/mvhscryptoden/",
-        "instagram": "https://www.instagram.com/mvhs_cryptoden",
-        "remind": "",
-        "email": "mvhscryptoden@gmail.com"
+        "announcements": "https://docs.google.com/spreadsheets/d/1tXeIbb3GnXoRVfBg7_okmREylMohN3jY-jh7IgKio6A/gviz/tq?tqx=out:json&gid=1470706732",
+        "htmwInfo": "https://docs.google.com/spreadsheets/d/11zbndqc7cuG3TvLM-zjd2phIK-ymN3U9LRMsmHy_k1c/gviz/tq?tqx=out:json&gid=0&tq=select%20*",
+        "socials": "https://docs.google.com/spreadsheets/d/1qGut3F1c4axmR6bLDsbdQj9oacEzI5b5Ua0tI07MeTk/gviz/tq?tqx=out:json&gid=0"
     }
 }
