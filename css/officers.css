@@ -1,27 +1,65 @@
 /* =========================
+   OFFICER PAGE
+========================= */
+
+.officerPage .leadershipSpotlight {
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.officerPage .leaderCard {
+    gap: 20px;
+    padding: 24px;
+}
+
+.officerPage .leaderCard img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.officerPage .officerGrid {
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.officerPage .officerCard {
+    border-color: var(--gray);
+}
+
+.officerPage .officerCard img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 14px;
+}
+
+/* =========================
    OFFICER FAQ
 ========================= */
+
 .faqItem {
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
     border-width: 2px;
     border-style: solid;
     border-image: linear-gradient(to right, transparent, var(--accent), transparent) 1;
     border-bottom: none;
-    margin-top: 30px;
-    margin-bottom: 50px;
 }
 
 .faqQuestion {
     font-weight: 600;
-    cursor: pointer;
+    cursor: default;
     position: relative;
     padding: 5px 0;
-    cursor: default;
 }
 
 .faqAnswer {
     margin-top: 10px;
-    padding: 0px 20px;
+    padding: 0 20px;
     color: var(--text);
     line-height: 1.5;
 }
@@ -37,7 +75,6 @@
     text-decoration: none;
     font-size: 14px;
     margin-top: 20px;
-    background: var(--button-bg-blue);
 }
 
 .faqButton > a {
@@ -55,10 +92,42 @@
     justify-content: center;
 }
 
-.btn.primary:hover {
-    border: 1px solid var(--gray);
+.btn.primary:hover,
+.btn.secondary:hover {
+    border-color: var(--gray);
 }
 
-.btn.secondary:hover {
-    border: 1px solid var(--gray);
+@media (max-width: 700px) {
+    .officerPage .leadershipSpotlight {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .officerPage .officerGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .officerPage .leaderCard {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .officerPage .leaderCard img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .officerPage .officerGrid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .faqButtons {
+        flex-direction: column;
+    }
 }
