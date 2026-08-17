@@ -47,7 +47,7 @@ export async function loadComp() {
                 </div>
 
                 <div class="competitionDetail">
-                    <span class="detailLabel">ACCESS PASSWORD</span>
+                    <span class="detailLabel">PASSWORD</span>
                     <strong class="competitionPassword">${comp.compPassword}</strong>
                 </div>
             </div>
