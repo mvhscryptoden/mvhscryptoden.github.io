@@ -283,6 +283,11 @@
         flex-basis: 155px;
     }
 
+    .secondaryOfficerCard{
+        display: flex;
+        flex-direction: column;
+    }
+
 }
 
 
@@ -302,6 +307,11 @@
         width: 120px;
         height: 120px;
         flex-basis: 120px;
+    }
+
+    .secondaryOfficerCard{
+        display: flex;
+        flex-direction: column;
     }
 
 }
