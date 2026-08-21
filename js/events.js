@@ -15,9 +15,13 @@ async function loadEvents() {
                 time: row.c?.[4]?.v ?? "",
                 location: row.c?.[5]?.v ?? "",
                 details: row.c?.[6]?.v ?? "",
-                title: row.c?.[7]?.v ?? ""
+                title: row.c?.[7]?.v ?? "",
+                hidden: String(row.c?.[8]?.v ?? "").toUpperCase() === "TRUE"
             }))
-            .filter(event => event.title || event.details || event.day);
+            .filter(event =>
+                !event.hidden &&
+                (event.title || event.details || event.day)
+            );
 
         displayEvents(1, "highlightedEventContainer", 0);
         displayEvents(3, "eventsContainer", 1);
@@ -52,13 +56,16 @@ function displayEvents(amount, containerId, start = 0) {
                 <h1 class="eventDay">${event.day}</h1>
                 <p class="eventMonthYear">${event.monthYear}</p>
             </div>
+
             <div class="eventInfo">
                 <div class="eventTitleHolder">
                     <h3 class="eventTitle">${event.title}</h3>
                     ${event.id ? `<p class="eventID">${event.id}</p>` : ""}
                 </div>
+
                 ${event.details ? `<p class="eventDetails"><strong>Details:</strong> ${event.details}</p>` : ""}
                 ${event.host ? `<p class="eventHost"><strong>Host:</strong> ${event.host}</p>` : ""}
+
                 <div class="eventInfoSpecial">
                     ${event.time ? `<div class="eventTime"><p><i class="fa-regular fa-clock eventInfoIcon" aria-hidden="true"></i>${event.time}</p></div>` : ""}
                     ${event.location ? `<div class="eventLocation"><p><i class="fa-solid fa-location-dot eventInfoIcon" aria-hidden="true"></i>${event.location}</p></div>` : ""}
