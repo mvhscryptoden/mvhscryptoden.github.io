@@ -99,7 +99,9 @@ section.hero {
 .pageEndContent { width: min(1100px, calc(100% - 48px)); margin: auto; text-align: center; }
 .subTitle { margin-bottom: -7px; }
 .section-header { margin-bottom: 5px; }
-.special { background-image: linear-gradient(to right, var(--accent), var(--secondary)); color: transparent; background-clip: text; }
+.special { 
+    color: var(--secondary);
+}
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
 
 footer {

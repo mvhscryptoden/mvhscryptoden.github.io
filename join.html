@@ -28,34 +28,85 @@
             <a href="competition.html">Competition</a>
             <a href="support.html">Support</a>
             <a href="photos.html">Photos</a>
-            <a class="nav-active" href="join.html" class="nav-cta">Join</a>
+            <a class="nav-active nav-cta" href="join.html">Join</a>
         </nav>
     </header>
 
     <!-- SECTION CONTENT -->
-    <section class="section form">
-        <div class="hero-content">
-            <h1>Join Crypto Den</h1>
+    <section class="join-section">
+        <div class="join-container">
+
+            <div class="join-header">
+                <p class="join-eyebrow">GET INVOLVED</p>
+                <h1>Join Crypto Den</h1>
+                <p>
+                    Interested in stocks, cryptocurrencie, asset management, finances, or just
+                    want to be part of the community? Join Crypto Den at Mission
+                    Vista High School.
+                </p>
+            </div>
+
+            <form
+                action="https://formspree.io/f/moeawggy"
+                method="POST"
+                class="joinForm"
+                id="joinForm"
+                novalidate
+            >
+
+                <div class="form-group">
+                    <label for="name">
+                        Full Name <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your full name"
+                        autocomplete="name"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        Email <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="your.email@example.com"
+                        autocomplete="email"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="info">
+                        Additional Information
+                        <span class="optional">(optional)</span>
+                    </label>
+
+                    <textarea
+                        id="optionalFieldId"
+                        name="info"
+                        placeholder="Tell us anything you'd like us to know..."
+                        rows="5"
+                    ></textarea>
+                </div>
+
+                <button type="submit">
+                    Join Crypto Den
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <p class="form-note">
+                    <span class="required">*</span> Required fields
+                </p>
+
+            </form>
         </div>
-
-        <form action="https://formspree.io/f/moeawggy" method="POST" class="joinForm" id="joinForm" novalidate>
-        <label>
-            <h4>Full Name: <span class="required">*</span></h4>
-            <input type="text" name="name">
-        </label>
-
-        <label>
-            <h4>Email: <span class="required">*</span></h4>
-            <input type="email" name="email">
-        </label>
-
-        <label>
-            <h4>Additional Information (optional):</h4>
-            <input id="optionalFieldId" type="text" name="info">
-        </label>
-        <!-- your other form fields go here -->
-        <button type="submit">Send</button>
-        </form>
     </section>
 
     <!-- FOOTER -->
