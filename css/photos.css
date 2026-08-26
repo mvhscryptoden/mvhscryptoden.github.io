@@ -1,0 +1,54 @@
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+#photosSection {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.photo-grid img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.02);
+}
+
+.no-photos,
+.photo-error {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 60px 20px;
+}
+
+@media (max-width: 900px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+}
